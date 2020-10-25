@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
 
-export let themeKey = "nekomata-ui-theme"
+let themeKey = "nekomata-ui-theme"
 
 export function changeThemeKey(key:string){
     themeKey = key;
