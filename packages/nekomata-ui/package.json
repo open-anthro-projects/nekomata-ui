@@ -1,6 +1,6 @@
 {
   "name": "nekomata-ui",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -12,10 +12,6 @@
     "validate": "svelte-check",
     "prepublishOnly": "npm run build"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
@@ -38,13 +34,17 @@
     "nekomata-ui",
     "typescript"
   ],
+  "author": "Open Anthro Projects",
+  "files": [
+    "src",
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/open-anthro-projects/nekomata-ui"
   },
   "homepage": "",
   "bugs": {
-    "url": "https://github.com/open-anthro-projects/nekomata-ui/issues"
-  },
-  "author": "Open Anthro Projects"
+      "url": "https://github.com/open-anthro-projects/nekomata-ui/issues"
+  }
 }
