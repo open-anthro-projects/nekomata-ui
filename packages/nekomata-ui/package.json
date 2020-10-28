@@ -1,12 +1,13 @@
 {
   "name": "nekomata-ui",
-  "version": "0.0.20",
+  "license": "MIT",
+  "version": "0.0.3",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
   "types": "dist/ts/index.d.ts",
   "scripts": {
-    "remove": "rm -rf ./dist",
+    "prebuild": "rm -rf ./dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "validate": "svelte-check"

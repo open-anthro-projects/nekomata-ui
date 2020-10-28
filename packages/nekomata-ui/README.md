@@ -11,4 +11,5 @@ A Svelte UI framework currently in development.
 Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the features. 
 
 ## Changelog:
-- 0.0.10: themeStore added. 
+- 0.0.3: themeStore export bug fixed. 
+- 0.0.2: themeStore added. 

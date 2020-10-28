@@ -36,6 +36,4 @@ function setTheme() {
     };
 }
 
-export const switchTheme = setTheme().switchTheme;
-export const setThemeOnLoad = setTheme().setThemeOnLoad;
-export const subscribe = setTheme().subscribe;
+export const theme = setTheme();
