@@ -2,6 +2,11 @@
 
 A Svelte UI framework currently in development.
 
+## Components
+- AppBar
+
+Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the components. 
+
 ## Features:
 - themeStore
     - For switching the theme from light to dark and the other way around.
@@ -11,5 +16,6 @@ A Svelte UI framework currently in development.
 Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the features. 
 
 ## Changelog:
+- 0.0.4: Initial AppBar component added
 - 0.0.3: themeStore export bug fixed. 
 - 0.0.2: themeStore added. 
