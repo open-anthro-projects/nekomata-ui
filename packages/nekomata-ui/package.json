@@ -10,14 +10,22 @@
     "prebuild": "rm -rf ./dist",
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "test": "jest src",
+    "test:watch": "npm run test -- --watch"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
     "@rollup/plugin-node-resolve": "^9.0.0",
     "@rollup/plugin-typescript": "^6.0.0",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/svelte": "^3.0.0",
     "@tsconfig/svelte": "^1.0.10",
+    "babel-jest": "^26.6.3",
     "fs-extra": "9.0.1",
     "glob": "7.1.6",
+    "jest": "^26.6.3",
     "rollup": "^2.32.0",
     "rollup-plugin-execute": "1.1.1",
     "rollup-plugin-filesize": "^9.0.2",
@@ -25,9 +33,11 @@
     "rollup-plugin-terser": "^7.0.2",
     "svelte": "^3.28.0",
     "svelte-check": "^1.0.60",
-    "svelte-preprocess": "^4.5.1",
+    "svelte-jester": "^1.1.5",
+    "svelte-preprocess": "^4.6.1",
+    "ts-jest": "^26.4.4",
     "tslib": "^2.0.1",
-    "typescript": "^4.0.3"
+    "typescript": "^4.1.2"
   },
   "keywords": [
     "svelte",
@@ -46,5 +56,25 @@
   "homepage": "",
   "bugs": {
     "url": "https://github.com/open-anthro-projects/nekomata-ui/issues"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.svelte$": [
+        "svelte-jester",
+        {
+          "preprocess": true
+        }
+      ],
+      "^.+\\.ts$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "svelte"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   }
 }
