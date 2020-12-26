@@ -1,7 +1,36 @@
 <script lang="ts">
-  import type { AppBarProps } from './types'
-  import { buildCSSStyleString } from './functions'
+   interface AppBarProps {
+    display?: String;
+    flexDirection?: String;
+    boxSizing?: String;
+    width?: String;
+    flexShrink?: String;
+    position?: String;
+    zIndex?: Number;
+    top?: String;
+    left?: String;
+    right?: String;
+    bottom?: String;
+    backgroundColor?: String;
+    color?: String;
+    boxShadow?: String;
+    transition?: String;
+    borderWidth?: String;
+    borderStyle?: String;
+    borderColor?: String;
+    borderRadius?: String;
+  }
+
   export let props: AppBarProps
+
+  function buildCSSStyleString(appBarProps:AppBarProps){
+    let styleString = ""; 
+    for (const key in appBarProps) {
+        styleString = styleString + "--appbar-"+ `${key}`+ ": " + `${appBarProps[key]};` + " " 
+    }
+    return styleString;
+  }
+
   let cssStyleString = buildCSSStyleString(props);
 </script>
 
@@ -28,15 +57,19 @@
     background-color: var(--appbar-backgroundColor, initial);
     transition: var(--appbar-transition, initial);
     box-shadow: var(--appbar-boxShadow, initial);
+    border-width: var(--appbar-borderWidth, initial); 
+    border-style: var(--appbar-borderStyle, initial); 
+    border-color: var(--appbar-borderColor, initial);
+    border-radius: var(--appbar-borderRadius, initial);
   }
 </style>
 
 {#if cssStyleString == ""}
-  <header class="style position">
+  <header title="header" class="{$$restProps.class || ''} style position">
     <slot />
   </header>
 {:else}
-  <header class="style position" style="{cssStyleString}">
+  <header title="header" class="{$$restProps.class || ''} style position" style="{cssStyleString}">
     <slot />
   </header>
 {/if}
