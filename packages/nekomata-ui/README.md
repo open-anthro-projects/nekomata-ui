@@ -4,6 +4,7 @@ A Svelte UI framework currently in development.
 
 ## Components
 - AppBar
+- Row
 
 Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the components. 
 
@@ -16,6 +17,7 @@ Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for m
 Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the features. 
 
 ## Changelog:
+- 0.0.7: Row component added
 - 0.0.4: Initial AppBar component added
 - 0.0.3: themeStore export bug fixed. 
 - 0.0.2: themeStore added. 

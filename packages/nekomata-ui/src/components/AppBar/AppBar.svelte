@@ -49,7 +49,7 @@
     left: var(--appbar-left, initial);
     right: var(--appbar-right, initial);
     bottom: var(--appbar-bottom, initial);
-    position: var(--appbar-position, "initial");
+    position: var(--appbar-position, initial);
   }
 
   .style {
