@@ -2,7 +2,7 @@
 
 **Currently in development**
 
-Nekomata-ui is an UI framework for Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
+Nekomata-ui is an UI framework build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
 
 ### Nekomata-ui tries to be that by:
 
@@ -11,7 +11,11 @@ Nekomata-ui is an UI framework for Svelte that aims to be a radical new approach
 
 
 ***
+### Installation
 
+```bash
+npm install --save-dev nekomata-ui
+```
 
 
 [![codecov](https://codecov.io/gh/open-anthro-projects/nekomata-ui/branch/main/graph/badge.svg?token=N5XLUK9L31)](https://codecov.io/gh/open-anthro-projects/nekomata-ui) does not contain all components at this time!
