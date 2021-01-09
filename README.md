@@ -1,5 +1,12 @@
 <h1 align="center">Nekomata-ui</h1>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/nekomata-ui">
+    <img alt="npm" src="https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic">
+  </a>
+</p>
+
+
 **Currently in development**
 
 Nekomata-ui is an UI framework build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
