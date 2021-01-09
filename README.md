@@ -9,8 +9,6 @@
   </a>
 </p>
 
-
-
 **Currently in development**
 
 Nekomata-ui is an UI framework build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
@@ -27,9 +25,27 @@ Nekomata-ui is an UI framework build with Svelte that aims to be a radical new a
 ```bash
 npm install --save-dev nekomata-ui
 ```
+
+### Documentation
+**Currently in development**
+
+Can be found in our [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki)
+
+This will change when there is a site.
+
+
 ### Code coverage:
 
-| Nekomata-ui | Unit tests (dev) | Unit tests | Integration tests|
+| Nekomata-ui | Unit tests (dev) | Unit tests | Integration tests |
 |:-:|:-:|:-:|:-:|
 | Components| [![codecov](https://codecov.io/gh/open-anthro-projects/nekomata-ui/branch/main/graph/badge.svg?token=N5XLUK9L31)](https://codecov.io/gh/open-anthro-projects/nekomata-ui) | - | - |
 | Features | - | - | - |
+
+### Contributing
+**Currently in development**
+
+Ideas for contributing are welcome.
+
+### Climate policy
+
+Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months.
