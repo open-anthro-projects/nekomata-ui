@@ -27,6 +27,9 @@ Nekomata-ui is an UI framework build with Svelte that aims to be a radical new a
 ```bash
 npm install --save-dev nekomata-ui
 ```
+### Code coverage:
 
-
-[![codecov](https://codecov.io/gh/open-anthro-projects/nekomata-ui/branch/main/graph/badge.svg?token=N5XLUK9L31)](https://codecov.io/gh/open-anthro-projects/nekomata-ui) does not contain all components at this time!
+| Nekomata-ui | Unit tests (dev) | Unit tests | Integration tests|
+|:-:|:-:|:-:|:-:|
+| Components| [![codecov](https://codecov.io/gh/open-anthro-projects/nekomata-ui/branch/main/graph/badge.svg?token=N5XLUK9L31)](https://codecov.io/gh/open-anthro-projects/nekomata-ui) | - | - |
+| Features | - | - | - |
