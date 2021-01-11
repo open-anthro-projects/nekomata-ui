@@ -17,7 +17,7 @@ Nekomata-ui is an UI framework build with Svelte that aims to be a radical new a
 
 * Focusing on the freedom to adapt things to your own needs in the components. (Nekomata-ui takes inspiration from other frameworks and UI designs for its components but does not enforce that the ideas behind it are followed)
 * Only using CSS3 without any external library.
-* Going forward instead of looking back. (Implementing new specifications if the browser support is around 80/90% and by not offering no support for outdated browsers IE11)
+* Going forward instead of looking back. (Implementing new specifications if the browser support is around 80/90% and by not offering support for outdated browsers IE11)
 
 ***
 ### Installation
