@@ -48,4 +48,4 @@ Ideas for contributing are welcome.
 
 ### Climate policy
 
-Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months.
+Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
