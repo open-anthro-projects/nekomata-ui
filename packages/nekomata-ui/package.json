@@ -1,11 +1,14 @@
 {
   "name": "nekomata-ui",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs"
+  },
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "build": "rollup -c",
@@ -78,9 +81,5 @@
     "setupFilesAfterEnv": [
       "@testing-library/jest-dom/extend-expect"
     ]
-  },
-  "dependencies": {
-    "@babel/preset-typescript": "^7.12.7",
-    "@types/jest": "^26.0.19"
   }
 }

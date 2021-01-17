@@ -18,10 +18,10 @@
 
  export let props: RowProps
 
- function buildCSSStyleString(appBarProps:RowProps){
+ function buildCSSStyleString(rowProps:RowProps){
    let styleString = ""; 
-   for (const key in appBarProps) {
-       styleString = styleString + "--row-"+ `${key}`+ ": " + `${appBarProps[key]};` + " " 
+   for (const key in rowProps) {
+       styleString = styleString + "--row-"+ `${key}`+ ": " + `${rowProps[key]};` + " " 
    }
    return styleString;
  }
