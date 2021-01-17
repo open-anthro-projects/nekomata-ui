@@ -6,6 +6,8 @@
     gridTemplateColumns?: String;
     gridTemplateRows?: String;
     gridTemplateAreas?: String;
+    gridTemplateAreas_Def?: String;
+    gridTemplateAreas_MW_600px?: String;
     gap?: String;
     gap_MW_600px?: String;
     gap_Def?: String;
@@ -44,7 +46,7 @@
     color: var(--grid-container-color, inherit);
     grid-template-columns: var(--grid-container-gridTemplateColumns, repeat(12, 1fr));
     grid-template-rows: var(--grid-container-gridTemplateRows, none);
-    grid-template-areas: var(--grid-container-gridTemplateAreas, none);
+    grid-template-areas: var( --grid-container-gridTemplateAreas_Def ,var(--grid-container-gridTemplateAreas, none));
     gap: var(--gap_Def, var(--grid-container-gap, 16px 16px));
     justify-items: var(--grid-container-justifyItems, stretch);
     padding: var(--grid-container-padding_Def, var(--grid-container-padding, 16px 16px 16px 16px));
@@ -62,6 +64,7 @@
       gap: var(--gap_MW_600px, var(--grid-container-gap, 16px 16px));
       padding: var(--grid-container-padding_MW_600px, var(--grid-container-padding, 24px 24px 24px 24px));
       margin: var(--grid-container-margin_MW_600px, var(--grid-container-margin, 0px 0px 0px 0px));
+      grid-template-areas: var( --grid-container-gridTemplateAreas_MW_600px,var(--grid-container-gridTemplateAreas, none));
     }
   }
 
