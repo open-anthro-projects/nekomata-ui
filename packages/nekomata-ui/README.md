@@ -60,7 +60,7 @@ Ideas for contributing are welcome.
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
-- 0.0.9: SvgIcon added and a few fixes.
+- 0.1.0: SvgIcon added and a few fixes.
 - 0.0.8: GridContainer (initial version) added.
 - 0.0.7: Row component added.
 - 0.0.4: Initial AppBar component added.
