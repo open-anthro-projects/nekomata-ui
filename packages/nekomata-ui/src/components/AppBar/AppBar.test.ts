@@ -8,31 +8,31 @@ import AppBar from './AppBar.svelte'
 describe("Unit tests to check correct rendering with different conditions", () => {
 
   test('AppBar render with no props:{}', () => {
-    const {getByTitle} = render(AppBar, { props: { props:{} } });
-    expect(getByTitle('header')).toHaveClass('style')
-    expect(getByTitle('header')).toHaveClass('position')
+    const {getByTestId} = render(AppBar, { props: { props:{} } });
+    expect(getByTestId('header')).toHaveClass('style')
+    expect(getByTestId('header')).toHaveClass('position')
   })
 
   test('AppBar renders with props:{color:"black"}', () => {
-    const { getByTitle } = render(AppBar, { props: { props:{color:"black"} } })
-    expect(getByTitle('header')).toHaveClass('style')
-    expect(getByTitle('header')).toHaveClass('position')
-    expect(getByTitle('header')).toHaveStyle('--appbar-color: black;')
+    const { getByTestId } = render(AppBar, { props: { props:{color:"black"} } })
+    expect(getByTestId('header')).toHaveClass('style')
+    expect(getByTestId('header')).toHaveClass('position')
+    expect(getByTestId('header')).toHaveStyle('--appbar-color: black;')
   })
 
   test('AppBar renders without props:{} and but with a class given by his parent', () => {
-    const { getByTitle } = render(AppBar, { props: { props:{}, class:"top" }})
-    expect(getByTitle('header')).toHaveClass('top')
-    expect(getByTitle('header')).toHaveClass('style')
-    expect(getByTitle('header')).toHaveClass('position')
+    const { getByTestId } = render(AppBar, { props: { props:{}, class:"test" }})
+    expect(getByTestId('header')).toHaveClass('test')
+    expect(getByTestId('header')).toHaveClass('style')
+    expect(getByTestId('header')).toHaveClass('position')
   })
 
   test('AppBar renders with props:{color:"black"} and but with a class given by his parent', () => {
-    const { getByTitle } = render(AppBar, { props: { props:{color:"black"}, class:"top" }})
-    expect(getByTitle('header')).toHaveClass('top')
-    expect(getByTitle('header')).toHaveClass('style')
-    expect(getByTitle('header')).toHaveClass('position')
-    expect(getByTitle('header')).toHaveStyle('--appbar-color: black;')
+    const { getByTestId } = render(AppBar, { props: { props:{color:"black"}, class:"test" }})
+    expect(getByTestId('header')).toHaveClass('test')
+    expect(getByTestId('header')).toHaveClass('style')
+    expect(getByTestId('header')).toHaveClass('position')
+    expect(getByTestId('header')).toHaveStyle('--appbar-color: black;')
   })
 
 });

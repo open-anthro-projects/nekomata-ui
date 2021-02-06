@@ -8,27 +8,27 @@ import GridContainer from './GridContainer.svelte'
 describe("Unit tests to check correct rendering with different conditions", () => {
 
   test('GridContainer render with no props:{}', () => {
-    const {getByTitle} = render(GridContainer, { props: { props:{} } });
-    expect(getByTitle('grid-container')).toHaveClass('grid-container')
+    const {getByTestId} = render(GridContainer, { props: { props:{} } });
+    expect(getByTestId('grid-container')).toHaveClass('grid-container')
   })
 
   test('GridContainer renders with props:{color:"black"}', () => {
-    const { getByTitle } = render(GridContainer, { props: { props:{color:"black"} } })
-    expect(getByTitle('grid-container')).toHaveClass('grid-container')
-    expect(getByTitle('grid-container')).toHaveStyle('--grid-container-color: black;')
+    const { getByTestId } = render(GridContainer, { props: { props:{color:"black"} } })
+    expect(getByTestId('grid-container')).toHaveClass('grid-container')
+    expect(getByTestId('grid-container')).toHaveStyle('--grid-container-color: black;')
   })
 
   test('GridContainer renders without props:{} and but with a class given by his parent', () => {
-    const { getByTitle } = render(GridContainer, { props: { props:{}, class:"top" }})
-    expect(getByTitle('grid-container')).toHaveClass('top')
-    expect(getByTitle('grid-container')).toHaveClass('grid-container')
+    const { getByTestId } = render(GridContainer, { props: { props:{}, class:"test" }})
+    expect(getByTestId('grid-container')).toHaveClass('test')
+    expect(getByTestId('grid-container')).toHaveClass('grid-container')
   })
 
   test('GridContainer renders with props:{color:"black"} and but with a class given by his parent', () => {
-    const { getByTitle } = render(GridContainer, { props: { props:{color:"black"}, class:"top" }})
-    expect(getByTitle('grid-container')).toHaveClass('top')
-    expect(getByTitle('grid-container')).toHaveClass('grid-container')
-    expect(getByTitle('grid-container')).toHaveStyle('--grid-container-color: black;')
+    const { getByTestId } = render(GridContainer, { props: { props:{color:"black"}, class:"test" }})
+    expect(getByTestId('grid-container')).toHaveClass('test')
+    expect(getByTestId('grid-container')).toHaveClass('grid-container')
+    expect(getByTestId('grid-container')).toHaveStyle('--grid-container-color: black;')
   })
 
 });

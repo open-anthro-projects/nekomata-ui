@@ -71,11 +71,11 @@
 </style>
 
 {#if cssStyleString == ""}
-  <div title="grid-container" class="{$$restProps.class || ''} grid-container">
+  <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container">
     <slot />
   </div>
 {:else}
-  <div title="grid-container" class="{$$restProps.class || ''} grid-container" style="{cssStyleString}">
+  <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container" style="{cssStyleString}">
     <slot />
   </div>
 {/if}

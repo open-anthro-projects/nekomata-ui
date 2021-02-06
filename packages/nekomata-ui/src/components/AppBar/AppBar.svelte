@@ -65,11 +65,11 @@
 </style>
 
 {#if cssStyleString == ""}
-  <header title="header" class="{$$restProps.class || ''} style position">
+  <header data-testid="header" class="{$$restProps.class || ''} style position">
     <slot />
   </header>
 {:else}
-  <header title="header" class="{$$restProps.class || ''} style position" style="{cssStyleString}">
+  <header data-testid="header" class="{$$restProps.class || ''} style position" style="{cssStyleString}">
     <slot />
   </header>
 {/if}

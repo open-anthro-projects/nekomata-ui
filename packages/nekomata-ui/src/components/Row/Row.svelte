@@ -58,11 +58,11 @@
 </style>
 
 {#if cssStyleString == ""}
- <div title="row" class="{$$restProps.class || ''} row">
+ <div data-testid="row" class="{$$restProps.class || ''} row">
    <slot />
  </div>
 {:else}
- <div title="row" class="{$$restProps.class || ''} row" style="{cssStyleString}">
+ <div data-testid="row" class="{$$restProps.class || ''} row" style="{cssStyleString}">
    <slot />
  </div>
 {/if}
