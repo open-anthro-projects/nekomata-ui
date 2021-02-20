@@ -19,12 +19,17 @@
  export let props: RowProps
 
  function buildCSSStyleString(rowProps:RowProps){
-   let styleString = ""; 
-   for (const key in rowProps) {
-       styleString = styleString + "--row-"+ `${key}`+ ": " + `${rowProps[key]};` + " " 
-   }
-   return styleString;
+  let styleString = ""; 
+  for (const key in rowProps) {
+    if (key !== "style"){
+      styleString = styleString + " --row-"+ `${key}`+ ": " + `${rowProps[key]};`; 
+    } else {
+      styleString = styleString + ` ${rowProps[key]};`
+    }
+  }
+  return styleString;
  }
+
 
  let cssStyleString = buildCSSStyleString(props);
 </script>

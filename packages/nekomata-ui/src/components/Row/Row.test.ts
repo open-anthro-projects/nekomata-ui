@@ -31,4 +31,56 @@ describe("Unit tests to check correct rendering with different conditions", () =
     expect(getByTestId('row')).toHaveStyle('--row-padding: 0px 0px 0px 0px;')
   })
 
+  test('Row renders with props:{padding:"0px 0px 0px 0px", style:"padding: 20px"}', () => {
+    const { getByTestId } = render(Row, { props: { props:{padding:"0px 0px 0px 0px",style:"padding: 20px"} } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('--row-padding: 0px 0px 0px 0px; padding: 20px;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px", padding:"0px 0px 0px 0px"}', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px", padding:"0px 0px 0px 0px"} } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px; --row-padding: 0px 0px 0px 0px;')
+  })
+
+  test('Row renders with props:{padding:"0px 0px 0px 0px", style:"padding: 20px"} and but with a class given by his parent' , () => {
+    const { getByTestId } = render(Row, { props: { props:{padding:"0px 0px 0px 0px",style:"padding: 20px"}, class:"test" } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveClass('test')
+    expect(getByTestId('row')).toHaveStyle('--row-padding: 0px 0px 0px 0px; padding: 20px;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px", padding:"0px 0px 0px 0px"} and but with a class given by his parent', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px", padding:"0px 0px 0px 0px"}, class:"test" } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveClass('test')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px; --row-padding: 0px 0px 0px 0px;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px, "}', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px"} } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px"} and but with a class given by his parent', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px"}, class:"test" }})
+    expect(getByTestId('row')).toHaveClass('test')
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px; color: black"}', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px; color: black"} } })
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px; color: black;')
+  })
+
+  test('Row renders with props:{style:"padding: 20px; color: black} and but with a class given by his parent', () => {
+    const { getByTestId } = render(Row, { props: { props:{style:"padding: 20px; color: black"}, class:"test" }})
+    expect(getByTestId('row')).toHaveClass('test')
+    expect(getByTestId('row')).toHaveClass('row')
+    expect(getByTestId('row')).toHaveStyle('padding: 20px; color: black;')
+  })
+
 });

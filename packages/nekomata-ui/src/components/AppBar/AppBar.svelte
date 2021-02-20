@@ -19,6 +19,7 @@
     borderStyle?: String;
     borderColor?: String;
     borderRadius?: String;
+    style?: String;
   }
 
   export let props: AppBarProps
@@ -26,7 +27,11 @@
   function buildCSSStyleString(appBarProps:AppBarProps){
     let styleString = ""; 
     for (const key in appBarProps) {
-        styleString = styleString + "--appbar-"+ `${key}`+ ": " + `${appBarProps[key]};` + " " 
+        if (key !== "style"){
+          styleString = styleString + " --appbar-"+ `${key}`+ ": " + `${appBarProps[key]};`;
+        } else {
+          styleString = styleString + `${appBarProps[key]};`
+        }
     }
     return styleString;
   }

@@ -3,6 +3,7 @@
         height?: String;
         width?: String;
         fill?: String;
+        style?: String;
     }
 
     export let props: SVGProps;
@@ -12,7 +13,11 @@
     function buildCSSStyleString(svgProps:SVGProps){
     let styleString = ""; 
     for (const key in svgProps) {
-        styleString = styleString + "--svgIcon-"+ `${key}`+ ": " + `${svgProps[key]};` + " " 
+        if (key !== "style"){
+            styleString = styleString + " --svgIcon-"+ `${key}`+ ": " + `${svgProps[key]};`;
+        } else {
+            styleString = styleString + `${svgProps[key]};`
+        }
     }
     return styleString;
   }

@@ -1,46 +1,51 @@
 <script lang="ts">
-   interface GridContainerProps {
-    display?: String;
-    backgroundColor?: String;
-    color?: String;
-    gridTemplateColumns?: String;
-    gridTemplateRows?: String;
-    gridTemplateAreas?: String;
-    gridTemplateAreas_Def?: String;
-    gridTemplateAreas_MW_600px?: String;
-    gap?: String;
-    gap_MW_600px?: String;
-    gap_Def?: String;
-    justifyItems?: String;
-    padding?: String;
-    margin?: String;
-    padding_MW_600px?: String;
-    margin_MW_600px?: String;
-    padding_Def?: String;
-    margin_Def?: String;
-    alignItems?: String;
-    justifyContent?: String;
-    alignContent?: String;
-    gridAutoColumns?: String;
-    gridAutoRows?: String;
-    gridAutoFlow?: String;
-  }
+  interface GridContainerProps {
+  display?: String;
+  backgroundColor?: String;
+  color?: String;
+  gridTemplateColumns?: String;
+  gridTemplateRows?: String;
+  gridTemplateAreas?: String;
+  gridTemplateAreas_Def?: String;
+  gridTemplateAreas_MW_600px?: String;
+  gap?: String;
+  gap_MW_600px?: String;
+  gap_Def?: String;
+  justifyItems?: String;
+  padding?: String;
+  margin?: String;
+  padding_MW_600px?: String;
+  margin_MW_600px?: String;
+  padding_Def?: String;
+  margin_Def?: String;
+  alignItems?: String;
+  justifyContent?: String;
+  alignContent?: String;
+  gridAutoColumns?: String;
+  gridAutoRows?: String;
+  gridAutoFlow?: String;
+  style?: String;
+}
 
-  export let props: GridContainerProps
+export let props: GridContainerProps
 
-  function buildCSSStyleString(gridContainerProps:GridContainerProps){
-    let styleString = ""; 
-    for (const key in gridContainerProps) {
-        styleString = styleString + "--grid-container-"+ `${key}`+ ": " + `${gridContainerProps[key]};` + " " 
+function buildCSSStyleString(gridContainerProps:GridContainerProps){
+  let styleString = ""; 
+  for (const key in gridContainerProps) {
+    if (key !== "style"){
+      styleString = styleString + " --grid-container-"+ `${key}`+ ": " + `${gridContainerProps[key]};`;
+    } else {
+      styleString = styleString + `${gridContainerProps[key]};`
     }
-    return styleString;
   }
+  return styleString;
+}
 
-  let cssStyleString = buildCSSStyleString(props);
+let cssStyleString = buildCSSStyleString(props);
 </script>
 
 <style>
- .grid-container{
+  .grid-container{
     display: var(--grid-container-display, grid);
     background-color: var(--grid-container-backgroundColor, inherit);
     color: var(--grid-container-color, inherit);
@@ -57,16 +62,16 @@
     grid-auto-columns:var(--grid-container-gridAutoColumns, 1fr);
     grid-auto-rows: var(--grid-container-gridAutoRows, 1fr);
     grid-auto-flow: var(--grid-container-gridAutoFlow, row);
- }
- 
- @media (min-width: 600px) {
-    .grid-container{
-      gap: var(--gap_MW_600px, var(--grid-container-gap, 16px 16px));
-      padding: var(--grid-container-padding_MW_600px, var(--grid-container-padding, 24px 24px 24px 24px));
-      margin: var(--grid-container-margin_MW_600px, var(--grid-container-margin, 0px 0px 0px 0px));
-      grid-template-areas: var( --grid-container-gridTemplateAreas_MW_600px,var(--grid-container-gridTemplateAreas, none));
-    }
   }
+
+@media (min-width: 600px) {
+  .grid-container{
+    gap: var(--gap_MW_600px, var(--grid-container-gap, 16px 16px));
+    padding: var(--grid-container-padding_MW_600px, var(--grid-container-padding, 24px 24px 24px 24px));
+    margin: var(--grid-container-margin_MW_600px, var(--grid-container-margin, 0px 0px 0px 0px));
+    grid-template-areas: var( --grid-container-gridTemplateAreas_MW_600px,var(--grid-container-gridTemplateAreas, none));
+  }
+}
 
 </style>
 
@@ -74,7 +79,7 @@
   <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container">
     <slot />
   </div>
-{:else}
+  {:else}
   <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container" style="{cssStyleString}">
     <slot />
   </div>

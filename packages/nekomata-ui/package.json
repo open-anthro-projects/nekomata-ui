@@ -1,7 +1,7 @@
 {
   "name": "nekomata-ui",
   "license": "MIT",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -47,7 +47,11 @@
   "keywords": [
     "svelte",
     "nekomata-ui",
-    "typescript"
+    "typescript",
+    "ui",
+    "ui-components",
+    "components",
+    "svelte3"
   ],
   "author": "Open Anthro Projects",
   "files": [
