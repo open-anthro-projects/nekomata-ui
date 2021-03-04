@@ -61,7 +61,7 @@ Ideas for contributing are welcome.
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
-- 0.1.3: $$restProps.class changed to an clazz as class export.
+- 0.1.3: $$restProps.class changed to a clazz as class export.
 - 0.1.1: Custom style prop added to components.
 - 0.1.0: SvgIcon added and a few fixes.
 - 0.0.8: GridContainer (initial version) added.
