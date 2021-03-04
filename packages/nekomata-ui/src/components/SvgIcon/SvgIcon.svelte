@@ -9,6 +9,8 @@
     export let props: SVGProps;
     export let d: string;
     export let viewBox = "0 0 24 24"
+    let clazz = '';
+    export {clazz as class}
 
     function buildCSSStyleString(svgProps:SVGProps){
     let styleString = ""; 
@@ -34,11 +36,11 @@
 </style>
 
 {#if cssStyleString == ""}
-    <svg data-testid="svgIcon" class="{$$restProps.class || ''} svgIcon" focusable="false" viewBox={viewBox} aria-hidden="true">
+    <svg data-testid="svgIcon" class="{clazz} svgIcon" focusable="false" viewBox={viewBox} aria-hidden="true">
         <path d={d} />
     </svg>
 {:else}
-    <svg data-testid="svgIcon" class="{$$restProps.class || ''} svgIcon" style="{cssStyleString}" focusable="false" viewBox={viewBox} aria-hidden="true">
+    <svg data-testid="svgIcon" class="{clazz} svgIcon" style="{cssStyleString}" focusable="false" viewBox={viewBox} aria-hidden="true">
         <path d={d} />
     </svg>
 {/if}

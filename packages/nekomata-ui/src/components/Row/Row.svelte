@@ -17,6 +17,8 @@
  }
 
  export let props: RowProps
+ let clazz = '';
+ export {clazz as class}
 
  function buildCSSStyleString(rowProps:RowProps){
   let styleString = ""; 
@@ -63,11 +65,11 @@
 </style>
 
 {#if cssStyleString == ""}
- <div data-testid="row" class="{$$restProps.class || ''} row">
+ <div data-testid="row" class="{clazz} row">
    <slot />
  </div>
 {:else}
- <div data-testid="row" class="{$$restProps.class || ''} row" style="{cssStyleString}">
+ <div data-testid="row" class="{clazz} row" style="{cssStyleString}">
    <slot />
  </div>
 {/if}

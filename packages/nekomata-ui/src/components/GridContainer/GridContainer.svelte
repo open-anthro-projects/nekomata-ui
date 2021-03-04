@@ -28,6 +28,8 @@
 }
 
 export let props: GridContainerProps
+let clazz = '';
+export {clazz as class}
 
 function buildCSSStyleString(gridContainerProps:GridContainerProps){
   let styleString = ""; 
@@ -76,11 +78,11 @@ let cssStyleString = buildCSSStyleString(props);
 </style>
 
 {#if cssStyleString == ""}
-  <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container">
+  <div data-testid="grid-container" class="{clazz} grid-container">
     <slot />
   </div>
   {:else}
-  <div data-testid="grid-container" class="{$$restProps.class || ''} grid-container" style="{cssStyleString}">
+  <div data-testid="grid-container" class="{clazz} grid-container" style="{cssStyleString}">
     <slot />
   </div>
 {/if}

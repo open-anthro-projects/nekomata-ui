@@ -23,6 +23,8 @@
   }
 
   export let props: AppBarProps
+  let clazz = '';
+  export {clazz as class}
 
   function buildCSSStyleString(appBarProps:AppBarProps){
     let styleString = ""; 
@@ -70,11 +72,11 @@
 </style>
 
 {#if cssStyleString == ""}
-  <header data-testid="header" class="{$$restProps.class || ''} style position">
+  <header data-testid="header" class="{clazz} style position">
     <slot />
   </header>
 {:else}
-  <header data-testid="header" class="{$$restProps.class || ''} style position" style="{cssStyleString}">
+  <header data-testid="header" class="{clazz} style position" style="{cssStyleString}">
     <slot />
   </header>
 {/if}
