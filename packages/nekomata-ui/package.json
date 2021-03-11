@@ -1,13 +1,16 @@
 {
   "name": "nekomata-ui",
   "license": "MIT",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.mjs"
+    ".":{
+      "import": "./dist/index.mjs"
+    },
+     "./package.json": "./package.json"
   },
   "scripts": {
     "prebuild": "rm -rf ./dist",
