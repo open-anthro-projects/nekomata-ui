@@ -11,7 +11,7 @@
 
 **Currently in development**
 
-Nekomata-ui is an UI framework build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
+Nekomata-ui is an UI framework / component libary build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
 
 ### Nekomata-ui tries to be that by:
 
