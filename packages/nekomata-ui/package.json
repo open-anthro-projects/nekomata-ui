@@ -1,16 +1,16 @@
 {
   "name": "nekomata-ui",
   "license": "MIT",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/ts/index.d.ts",
   "exports": {
-    ".":{
+    ".": {
       "import": "./dist/index.mjs"
     },
-     "./package.json": "./package.json"
+    "./package.json": "./package.json"
   },
   "scripts": {
     "prebuild": "rm -rf ./dist",
@@ -45,7 +45,8 @@
     "svelte-preprocess": "^4.6.6",
     "ts-jest": "^26.5.0",
     "tslib": "^2.1.0",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "y18n": ">=4.0.1"
   },
   "keywords": [
     "svelte",
@@ -70,6 +71,7 @@
     "url": "https://github.com/open-anthro-projects/nekomata-ui/issues"
   },
   "jest": {
+    "verbose": true,
     "transform": {
       "^.+\\.js$": "babel-jest",
       "^.+\\.svelte$": [

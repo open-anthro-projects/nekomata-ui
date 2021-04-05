@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import Row from './Row.svelte'
+import Row from '../../../components/Row/Row.svelte'
 
 describe("Unit tests to check correct rendering with different conditions", () => {
 
@@ -24,7 +24,7 @@ describe("Unit tests to check correct rendering with different conditions", () =
     expect(getByTestId('row')).toHaveClass('row')
   })
 
-  test('Row renders with props:{padding:"0px 0px 0px 0px"} and but with a class given by his parent', () => {
+  test('Row renders with props:{padding:"0px 0px 0px 0px"} and with a class given by his parent', () => {
     const { getByTestId } = render(Row, { props: { props:{padding:"0px 0px 0px 0px"}, class:"test" }})
     expect(getByTestId('row')).toHaveClass('test')
     expect(getByTestId('row')).toHaveClass('row')

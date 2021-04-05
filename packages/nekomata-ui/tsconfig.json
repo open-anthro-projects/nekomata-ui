@@ -4,6 +4,6 @@
       "sourceMap": true,
       "types": ["jest","svelte"]
     },
-    "include": ["src/**/*", "src/AppBar/.js"],
+    "include": ["src/**/*"],
     "exclude": ["node_modules/*"],
   }

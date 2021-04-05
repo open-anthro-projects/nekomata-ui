@@ -18,7 +18,7 @@
         if (key !== "style"){
             styleString = styleString + " --svgIcon-"+ `${key}`+ ": " + `${svgProps[key]};`;
         } else {
-            styleString = styleString + `${svgProps[key]};`
+            styleString = styleString + ` ${svgProps[key]};`
         }
     }
     return styleString;
