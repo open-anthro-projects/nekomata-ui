@@ -42,9 +42,8 @@ This will change when there is a site.
 | Features | - | - | - |
 
 ### Contributing
-**Currently in development**
 
-Ideas for contributing are welcome.
+[Contributing](https://github.com/open-anthro-projects/nekomata-ui/edit/main/CONTRIBUTING.md)
 
 ### Climate policy
 
