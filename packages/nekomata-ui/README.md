@@ -53,7 +53,7 @@ This will change when there is a site.
 
 ### Contributing
 
-[Contributing](https://github.com/open-anthro-projects/nekomata-ui/edit/main/CONTRIBUTING.md)
+[Contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md)
 
 ### Climate policy
 
