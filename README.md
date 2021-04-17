@@ -1,6 +1,6 @@
-<h1 style="text-align: center">Nekomata-ui</h1>
+<h1 style="text-align: justify">Nekomata-ui</h1>
 
-<p style="text-align: center">
+<p style="text-align: justify">
   <a href="https://www.npmjs.com/package/nekomata-ui">
     <img alt="npm" src="https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic">
   </a>
