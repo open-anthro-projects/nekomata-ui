@@ -35,10 +35,14 @@
           styleString = styleString + `${appBarProps[key]};`
         }
     }
-    return styleString;
+    if (styleString === ""){
+      return null;
+    } else {
+      return styleString;
+    }
   }
 
-  let cssStyleString = buildCSSStyleString(props);
+  $: style = buildCSSStyleString(props);
 </script>
 
 <style>
@@ -71,12 +75,6 @@
   }
 </style>
 
-{#if cssStyleString == ""}
-  <header data-testid="header" class="{clazz} style position">
-    <slot />
-  </header>
-{:else}
-  <header data-testid="header" class="{clazz} style position" style="{cssStyleString}">
-    <slot />
-  </header>
-{/if}
+<header data-testid="header" class="{clazz} style position" style={style}>
+  <slot />
+</header>

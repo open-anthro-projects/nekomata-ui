@@ -40,10 +40,14 @@ function buildCSSStyleString(gridContainerProps:GridContainerProps){
       styleString = styleString + `${gridContainerProps[key]};`
     }
   }
-  return styleString;
+  if (styleString === ""){
+      return null;
+  } else {
+      return styleString;
+  }
 }
 
-let cssStyleString = buildCSSStyleString(props);
+$: style = buildCSSStyleString(props);
 </script>
 
 <style>
@@ -77,12 +81,6 @@ let cssStyleString = buildCSSStyleString(props);
 
 </style>
 
-{#if cssStyleString == ""}
-  <div data-testid="grid-container" class="{clazz} grid-container">
-    <slot />
-  </div>
-  {:else}
-  <div data-testid="grid-container" class="{clazz} grid-container" style="{cssStyleString}">
-    <slot />
-  </div>
-{/if}
+<div data-testid="grid-container" class="{clazz} grid-container" style={style}>
+  <slot />
+</div>

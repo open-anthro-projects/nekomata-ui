@@ -29,11 +29,15 @@
       styleString = styleString + ` ${rowProps[key]};`
     }
   }
-  return styleString;
+  if (styleString === ""){
+      return null;
+  } else {
+      return styleString;
+  }
  }
 
 
- let cssStyleString = buildCSSStyleString(props);
+ $: style = buildCSSStyleString(props);
 </script>
 
 <style>
@@ -64,12 +68,7 @@
 
 </style>
 
-{#if cssStyleString == ""}
- <div data-testid="row" class="{clazz} row">
+
+ <div data-testid="row" class="{clazz} row" style={style}>
    <slot />
  </div>
-{:else}
- <div data-testid="row" class="{clazz} row" style="{cssStyleString}">
-   <slot />
- </div>
-{/if}

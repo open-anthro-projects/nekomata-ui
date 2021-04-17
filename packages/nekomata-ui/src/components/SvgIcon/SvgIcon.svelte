@@ -21,10 +21,14 @@
             styleString = styleString + ` ${svgProps[key]};`
         }
     }
-    return styleString;
-  }
+        if (styleString === ""){
+        return null;
+        } else {
+        return styleString;
+        }
+    }
 
-  let cssStyleString = buildCSSStyleString(props);
+    $: style = buildCSSStyleString(props);
 </script>
 
 <style>
@@ -35,12 +39,6 @@
     }
 </style>
 
-{#if cssStyleString == ""}
-    <svg data-testid="svgIcon" class="{clazz} svgIcon" focusable="false" viewBox={viewBox} aria-hidden="true">
-        <path d={d} />
-    </svg>
-{:else}
-    <svg data-testid="svgIcon" class="{clazz} svgIcon" style="{cssStyleString}" focusable="false" viewBox={viewBox} aria-hidden="true">
-        <path d={d} />
-    </svg>
-{/if}
+<svg data-testid="svgIcon" class="{clazz} svgIcon" style={style} focusable="false" viewBox={viewBox} aria-hidden="true">
+    <path d={d} />
+</svg>
