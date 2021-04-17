@@ -60,6 +60,7 @@ This will change when there is a site.
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
+- 0.1.7: CssStyleString changed to $: style.
 - 0.1.6: SvgIcon test fixes and package structure changes.
 - 0.1.5: Fix package.json export.
 - 0.1.3: $$restProps.class changed to a clazz as class export.
