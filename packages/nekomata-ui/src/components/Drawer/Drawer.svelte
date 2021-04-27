@@ -112,7 +112,7 @@
 
 </style>
 
-<aside class="{clazz} drawer" 
+<aside data-testid="drawer" class="{clazz} drawer" 
     class:left = {anchor === 'left'}
     class:right = {anchor === 'right'}
     class:top = {anchor === 'top'}  
