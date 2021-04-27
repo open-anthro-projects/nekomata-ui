@@ -10,7 +10,7 @@
 ## Reporting a Vulnerability
 
 Please make an issue in the Nekomata-ui GitHub repo to report a vulnerability.
-Or send a e-mail to info@furrystreet.com.
+Or send an e-mail to info@furrystreet.com.
 
 How we handle vulnerabilities is currently in development.
 
