@@ -5,12 +5,12 @@
 | Version | Supported          |
 | ------- | ------------------ |
 | 1.0.x   | :white_check_mark: |
-| < 1.0   | Will receive fixes if needed                |
+| < 1.0.0   | Will receive fixes if needed                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+Please make an issue in the Nekomata-ui GitHub repo to report a vulnerability.
+Or send a e-mail to info@furrystreet.com.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+How we handle vulnerabilities is currently in development.
+
