@@ -38,7 +38,7 @@
             if (key !== "style"){
             styleString = styleString + " --drawer-"+ `${key}`+ ": " + `${drawerProps[key]};`;
             } else {
-            styleString = styleString + `${drawerProps[key]};`
+            styleString = styleString + ` ${drawerProps[key]};`
             }
         }
         if (styleString === ""){
