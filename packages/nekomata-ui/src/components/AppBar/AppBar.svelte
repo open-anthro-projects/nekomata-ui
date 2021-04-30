@@ -1,48 +1,13 @@
 <script lang="ts">
-   interface AppBarProps {
-    display?: String;
-    flexDirection?: String;
-    boxSizing?: String;
-    width?: String;
-    flexShrink?: String;
-    position?: String;
-    zIndex?: Number;
-    top?: String;
-    left?: String;
-    right?: String;
-    bottom?: String;
-    backgroundColor?: String;
-    color?: String;
-    boxShadow?: String;
-    transition?: String;
-    borderWidth?: String;
-    borderStyle?: String;
-    borderColor?: String;
-    borderRadius?: String;
-    style?: String;
-  }
-
-  export let props: AppBarProps
+  import type AppBarStyleProps from './AppBarStyleProps'
+  import {buildCSS_StyleString} from './../../common'
+  export let props: AppBarStyleProps
   let clazz = '';
   export {clazz as class}
 
-  function buildCSSStyleString(appBarProps:AppBarProps){
-    let styleString = ""; 
-    for (const key in appBarProps) {
-        if (key !== "style"){
-          styleString = styleString + " --appbar-"+ `${key}`+ ": " + `${appBarProps[key]};`;
-        } else {
-          styleString = styleString + `${appBarProps[key]};`
-        }
-    }
-    if (styleString === ""){
-      return null;
-    } else {
-      return styleString;
-    }
-  }
+  const cssVarKey = "--appbar-";
 
-  $: style = buildCSSStyleString(props);
+  $: style = buildCSS_StyleString(cssVarKey, props);
 </script>
 
 <style>

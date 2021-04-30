@@ -1,43 +1,14 @@
 <script lang="ts">
-  interface RowProps {
-   display?: String;
-   minHeight?: String;
-   position?: String;
-   alignItems?: String;
-   padding?: String;
-   margin?: String;
-   flexWrap?: String;
-   minHeight_MW_600px?: String;
-   padding_MW_600px?: String;
-   margin_MW_600px?: String;
-   padding_Def?: String;
-   margin_Def?: String;
-   minHeight_Def?: String;
-   minHeight_FallB?: String;
- }
+  import type RowStyleProps from './RowStyleProps'
+  import {buildCSS_StyleString} from './../../common'
 
- export let props: RowProps
- let clazz = '';
- export {clazz as class}
+  export let props: RowStyleProps
+  let clazz = '';
+  export {clazz as class}
 
- function buildCSSStyleString(rowProps:RowProps){
-  let styleString = ""; 
-  for (const key in rowProps) {
-    if (key !== "style"){
-      styleString = styleString + " --row-"+ `${key}`+ ": " + `${rowProps[key]};`; 
-    } else {
-      styleString = styleString + ` ${rowProps[key]};`
-    }
-  }
-  if (styleString === ""){
-      return null;
-  } else {
-      return styleString;
-  }
- }
+  const cssVarKey = "--row-";
 
-
- $: style = buildCSSStyleString(props);
+  $: style = buildCSS_StyleString(cssVarKey, props);
 </script>
 
 <style>

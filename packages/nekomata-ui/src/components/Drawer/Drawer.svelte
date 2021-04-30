@@ -1,54 +1,18 @@
 <script lang="ts">
-    interface DrawerProps {
-        left?: String;
-        top?: String;
-        bottom?: String;
-        right?: String;
-        width?: String;
-        height?: String;
-        transform?: String;
-        activeTransform?: String;
-        position: String;
-        zIndex?: Number;
-        flex?: String;
-        display?: String;
-        outline?: String;
-        overflow?: String;
-        flexDirection?: String;
-        webkitOverflowScrolling?: String;
-        backgroundColor?: String;
-        transitionDuration?: String;
-        transitionTimingFunction?: String;
-        willChange?: String;
-        transitionProperty?: String;
-        style?: String;
-    }
+    import type DrawerStyleProps from './DrawerStyleProps'
+    import {buildCSS_StyleString} from './../../common'
 
 	export let active = false;
     export let variant: "modal" | "persistent" = "modal";
     export let anchor: "left" | "right" | "top" | "bottom" = "left";
 
-    export let props: DrawerProps
+    export let props: DrawerStyleProps
     let clazz = '';
     export {clazz as class}
 
-    function buildCSSStyleString(drawerProps: DrawerProps){
-        let styleString = ""; 
-        for (const key in drawerProps) {
-            if (key !== "style"){
-            styleString = styleString + " --drawer-"+ `${key}`+ ": " + `${drawerProps[key]};`;
-            } else {
-            styleString = styleString + ` ${drawerProps[key]};`
-            }
-        }
-        if (styleString === ""){
-            return null;
-        } else {
-            return styleString;
-        }
-    }
+    const cssVarKey = "--drawer-";
 
-    $: style = buildCSSStyleString(props);
+    $: style = buildCSS_StyleString(cssVarKey, props);
 
 </script>
 

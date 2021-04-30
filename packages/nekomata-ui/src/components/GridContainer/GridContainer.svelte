@@ -1,53 +1,15 @@
 <script lang="ts">
-  interface GridContainerProps {
-  display?: String;
-  backgroundColor?: String;
-  color?: String;
-  gridTemplateColumns?: String;
-  gridTemplateRows?: String;
-  gridTemplateAreas?: String;
-  gridTemplateAreas_Def?: String;
-  gridTemplateAreas_MW_600px?: String;
-  gap?: String;
-  gap_MW_600px?: String;
-  gap_Def?: String;
-  justifyItems?: String;
-  padding?: String;
-  margin?: String;
-  padding_MW_600px?: String;
-  margin_MW_600px?: String;
-  padding_Def?: String;
-  margin_Def?: String;
-  alignItems?: String;
-  justifyContent?: String;
-  alignContent?: String;
-  gridAutoColumns?: String;
-  gridAutoRows?: String;
-  gridAutoFlow?: String;
-  style?: String;
-}
+  import type GridContainerStyleProps from './GridContainerStyleProps'
+  import {buildCSS_StyleString} from './../../common'
+  
 
-export let props: GridContainerProps
-let clazz = '';
-export {clazz as class}
+  export let props: GridContainerStyleProps
+  let clazz = '';
+  export {clazz as class}
 
-function buildCSSStyleString(gridContainerProps:GridContainerProps){
-  let styleString = ""; 
-  for (const key in gridContainerProps) {
-    if (key !== "style"){
-      styleString = styleString + " --grid-container-"+ `${key}`+ ": " + `${gridContainerProps[key]};`;
-    } else {
-      styleString = styleString + `${gridContainerProps[key]};`
-    }
-  }
-  if (styleString === ""){
-      return null;
-  } else {
-      return styleString;
-  }
-}
+  const cssVarKey = "--grid-container-";
 
-$: style = buildCSSStyleString(props);
+  $: style = buildCSS_StyleString(cssVarKey, props);
 </script>
 
 <style>
