@@ -15,7 +15,7 @@ Nekomata-ui is an UI framework / component libary build with Svelte that focuses
 
 ### Nekomata-ui tries to be that by:
 
-* Exporting CSS custom properties from our components which can be used to alter how they work on the screen.
+* Exporting CSS custom properties (variables) from our components which can be used to alter how they work on the screen.
 
 ***
 ### Installation
