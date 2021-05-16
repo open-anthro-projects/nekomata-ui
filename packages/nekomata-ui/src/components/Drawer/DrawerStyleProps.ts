@@ -1,6 +1,4 @@
-import type { StyleProps } from "../../common";
-
-export default interface DrawerStyleProps extends StyleProps  {
+export default interface DrawerStyleProps  {
     left?: String;
     top?: String;
     bottom?: String;

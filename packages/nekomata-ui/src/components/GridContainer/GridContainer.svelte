@@ -1,48 +1,32 @@
 <script lang="ts">
-  import type GridContainerStyleProps from './GridContainerStyleProps'
-  import {buildCSS_StyleString} from './../../common'
-  
-
-  export let props: GridContainerStyleProps
   let clazz = '';
   export {clazz as class}
-
-  const cssVarKey = "--grid-container-";
-
-  $: style = buildCSS_StyleString(cssVarKey, props);
+  export let id:string = null;
+  export let style:string = null;
+  export let data_testid:string = null;
 </script>
 
 <style>
   .grid-container{
-    display: var(--grid-container-display, grid);
-    background-color: var(--grid-container-backgroundColor, inherit);
-    color: var(--grid-container-color, inherit);
-    grid-template-columns: var(--grid-container-gridTemplateColumns, repeat(12, 1fr));
-    grid-template-rows: var(--grid-container-gridTemplateRows, none);
-    grid-template-areas: var( --grid-container-gridTemplateAreas_Def ,var(--grid-container-gridTemplateAreas, none));
-    gap: var(--gap_Def, var(--grid-container-gap, 16px 16px));
-    justify-items: var(--grid-container-justifyItems, stretch);
-    padding: var(--grid-container-padding_Def, var(--grid-container-padding, 16px 16px 16px 16px));
-    margin: var(--grid-container-margin_Def, var(--grid-container-margin, 0px 0px 0px 0px));
-    align-items: var(--grid-container-alignItems, stretch);
-    justify-content: var(--grid-container-justifyContent, initial);
-    align-content: var(--grid-container-alignContent, initial);
-    grid-auto-columns:var(--grid-container-gridAutoColumns, 1fr);
-    grid-auto-rows: var(--grid-container-gridAutoRows, 1fr);
-    grid-auto-flow: var(--grid-container-gridAutoFlow, row);
+    display: var(--nm-ui-grid-container-display, grid);
+    background-color: var(--nm-ui-grid-container-background-color, inherit);
+    color: var(--nm-ui-grid-container-color, inherit);
+    grid-template-columns: var(--nm-ui-grid-container-grid-template-columns, none);
+    grid-template-rows: var(--nm-ui-grid-container-grid-template-rows, none);
+    grid-template-areas: var(--nm-ui-grid-container-grid-template-areas, none);
+    gap: var(--gap_Def, var(--nm-ui-grid-container-gap, 16px 16px));
+    justify-items: var(--nm-ui-grid-container-justify-items, stretch);
+    padding: var(--nm-ui-grid-container-padding, 16px 16px 16px 16px);
+    margin: var(--nm-ui-grid-container-margin, 0px 0px 0px 0px);
+    align-items: var(--nm-ui-grid-container-align-items, stretch);
+    justify-content: var(--nm-ui-grid-container-justify-content, initial);
+    align-content: var(--nm-ui-grid-container-align-content, initial);
+    grid-auto-columns:var(--nm-ui-grid-container-grid-auto-columns, 1fr);
+    grid-auto-rows: var(--nm-ui-grid-container-grid-auto-rows, 1fr);
+    grid-auto-flow: var(--nm-ui-grid-container-grid-auto-flow, row);
   }
-
-@media (min-width: 600px) {
-  .grid-container{
-    gap: var(--gap_MW_600px, var(--grid-container-gap, 16px 16px));
-    padding: var(--grid-container-padding_MW_600px, var(--grid-container-padding, 24px 24px 24px 24px));
-    margin: var(--grid-container-margin_MW_600px, var(--grid-container-margin, 0px 0px 0px 0px));
-    grid-template-areas: var( --grid-container-gridTemplateAreas_MW_600px,var(--grid-container-gridTemplateAreas, none));
-  }
-}
-
 </style>
 
-<div data-testid="grid-container" class="{clazz} grid-container" style={style}>
+<div {id} data-testid={data_testid} class="grid-container {clazz}" {style}>
   <slot />
 </div>

@@ -1,26 +1,21 @@
 <script lang="ts">
-    import type SVGStyleProps from './SVGStyleProps'
-    import {buildCSS_StyleString} from './../../common'
-
-    export let props: SVGStyleProps;
-    export let d: string;
-    export let viewBox = "0 0 24 24"
     let clazz = '';
     export {clazz as class}
-
-    const cssVarKey = "--svgIcon-";
-
-    $: style = buildCSS_StyleString(cssVarKey, props);
+    export let id:string = null;
+    export let style:string = null;
+    export let d: string;
+    export let viewBox = "0 0 24 24"
+    export let data_testid:string = null;
 </script>
 
 <style>
     .svgIcon{
-        height: var(--svgIcon-height, 1.5em);
-        width: var(--svgIcon-width, 1.5em);
-        fill: var(--svgIcon-fill, currentColor);
+        height: var(--nm-ui-svgIcon-height, 1.5em);
+        width: var(--nm-ui-svgIcon-width, 1.5em);
+        fill: var(--nm-ui-svgIcon-fill, currentColor);
     }
 </style>
 
-<svg data-testid="svgIcon" class="{clazz} svgIcon" style={style} focusable="false" viewBox={viewBox} aria-hidden="true">
+<svg {id} data-testid={data_testid} class="svgIcon {clazz}" {style} focusable="false" {viewBox} aria-hidden="true">
     <path d={d} />
 </svg>

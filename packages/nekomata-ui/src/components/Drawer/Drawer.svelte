@@ -1,18 +1,13 @@
 <script lang="ts">
-    import type DrawerStyleProps from './DrawerStyleProps'
-    import {buildCSS_StyleString} from './../../common'
-
+    let clazz = '';
+    export {clazz as class}
 	export let active = false;
     export let variant: "modal" | "persistent" = "modal";
     export let anchor: "left" | "right" | "top" | "bottom" = "left";
+    export let style:string = null;
 
-    export let props: DrawerStyleProps
-    let clazz = '';
-    export {clazz as class}
 
-    const cssVarKey = "--drawer-";
 
-    $: style = buildCSS_StyleString(cssVarKey, props);
 
 </script>
 
@@ -83,6 +78,6 @@
     class:bottom = {anchor === 'bottom'}     
     class:active 
     class:modal = {variant === 'modal'}
-    style={style}>
+    {style}>
         <slot/>
 </aside>
