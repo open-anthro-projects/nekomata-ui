@@ -2,82 +2,78 @@
     let clazz = '';
     export {clazz as class}
 	export let active = false;
-    export let variant: "modal" | "persistent" = "modal";
+    export let variant: "modal";
     export let anchor: "left" | "right" | "top" | "bottom" = "left";
     export let style:string = null;
-
-
-
-
 </script>
 
 <style>
 
-    .left{
-        left: var(--drawer-left, 0);
-        top: var(--drawer-top, 0);
-        bottom: var(--drawer-bottom, 0);
-        width: var(--drawer-width, 256px);
-        transform: var(--drawer-transform, translate(-100%,0));
+    .nm-ui-drawer-left{
+        left: var(--nm-ui-drawer-left, 0);
+        top: var(--nm-ui-drawer-top, 0);
+        bottom: var(--nm-ui-drawer-bottom, 0);
+        width: var(--nm-ui-drawer-width, 256px);
+        transform: var(--nm-ui-drawer-transform, translate(-100%,0));
     }
 
     
-    .right{
-        right: var(--drawer-right, 0);
-        top: var(--drawer-top, 0);
-        bottom: var(--drawer-bottom, 0);
-        width: var(--drawer-width, 256px);
-        transform: var(--drawer-transform, translate(100%,0));
+    .nm-ui-drawer-right{
+        right: var(--nm-ui-drawer-right, 0);
+        top: var(--nm-ui-drawer-top, 0);
+        bottom: var(--nm-ui-drawer-bottom, 0);
+        width: var(--nm-ui-drawer-width, 256px);
+        transform: var(--nm-ui-drawer-transform, translate(100%,0));
     }
 
-    .top{
-        left: var(--drawer-left, 0);
-        top: var(--drawer-top, 0);
-        right: var(--drawer-right, 0);
-        height: var(--drawer-height, 256px);
-        transform: var(--drawer-transform, translate(0,-100%));
+    .nm-ui-drawer-top{
+        left: var(--nm-ui-drawer-left, 0);
+        top: var(--nm-ui-drawer-top, 0);
+        right: var(--nm-ui-drawer-right, 0);
+        height: var(--nm-ui-drawer-height, 256px);
+        transform: var(--nm-ui-drawer-transform, translate(0,-100%));
     }
 
-    .bottom{
-        left: var(--drawer-left, 0);
-        bottom: var(--drawer-bottom, 0);
-        right: var(--drawer-right, 0);
-        height: var(--drawer-height, 256px);
-        transform: var(--drawer-transform, translate(0,0));
+    .nm-ui-drawer-bottom{
+        left: var(--nm-ui-drawer-left, 0);
+        bottom: var(--nm-ui-drawer-bottom, 0);
+        right: var(--nm-ui-drawer-right, 0);
+        height: var(--nm-ui-drawer-height, 256px);
+        transform: var(--nm-ui-drawer-transform, translate(0,0));
     }
 
-    .active{
-        transform: var(--drawer-activeTransform, translate(0,0));
+    .nm-ui-drawer-active{
+        transform: var(--nm-ui-drawer-active-transform, translate(0,0));
     }
     
-    .modal{
-        z-index: var(--drawer-zIndex, 1200);
-        position: var(--drawer-position, fixed);
+    .nm-ui-drawer-modal{
+        z-index: var(--nm-ui-drawer-z-index, 1200);
+        position: var(--nm-ui-drawer-position, fixed);
     }
 
-    .drawer{
-        flex: var(--drawer-flex, 1 0 auto);
-        display: var(--drawer-display, flex);
-        outline: var(--drawer-outline, 0);
-        overflow: var(--drawer-overflow, auto);
-        flex-direction:  var(--drawer-flexDirection, column);
-        -webkit-overflow-scrolling: var(--drawer-webkitOverflowScrolling, touch);
-        background-color: var(--drawer-backgroundColor, #fff);
-        transition-duration: var(--drawer-transitionDuration, 0.5s);
-        transition-timing-function: var(--drawer-transitionTimingFunction, cubic-bezier(0.2, 0, 0.5, 1));
-        will-change: var(--drawer-willChange, auto);
-        transition-property: var(--drawer-transitionProperty, transform, visibility, width);
+    .nm-ui-drawer{
+        flex: var(--nm-ui-drawer-flex, 1 0 auto);
+        display: var(--nm-ui-drawer-display, flex);
+        outline: var(--nm-ui-drawer-outline, 0);
+        overflow: var(--nm-ui-drawer-overflow, auto);
+        flex-direction:  var(--nm-ui-drawer-flex-direction, column);
+        -webkit-overflow-scrolling: var(--nm-ui-drawer-webkit-overflow-scrolling, touch);
+        background-color: var(--nm-ui-drawer-background-color, #fff);
+        transition-duration: var(--nm-ui-drawer-transition-duration, 0.5s);
+        transition-timing-function: var(--nm-ui-drawer-transition-timing-function, cubic-bezier(0.2, 0, 0.5, 1));
+        will-change: var(--nm-ui-drawer-will-change, auto);
+        transition-property: var(--nm-ui-drawer-transition-property, transform, visibility, width);
     }
 
 </style>
 
-<aside data-testid="drawer" class="{clazz} drawer" 
-    class:left = {anchor === 'left'}
-    class:right = {anchor === 'right'}
-    class:top = {anchor === 'top'}  
-    class:bottom = {anchor === 'bottom'}     
-    class:active 
-    class:modal = {variant === 'modal'}
+<aside data-testid="drawer" class="{clazz} nm-ui-drawer" 
+    class:nm-ui-drawer-left = {anchor === 'left'}
+    class:nm-ui-drawer-right = {anchor === 'right'}
+    class:nm-ui-drawer-top = {anchor === 'top'}  
+    class:nm-ui-drawer-bottom = {anchor === 'bottom'}     
+    class:nm-ui-drawer-active = {active === true}
+    class:nm-ui-drawer-modal = {variant === 'modal'}
     {style}>
         <slot/>
 </aside>

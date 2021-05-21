@@ -1,4 +1,4 @@
-export default interface DrawerStyleProps  {
+export default interface DrawerCSSProps  {
     left?: String;
     top?: String;
     bottom?: String;

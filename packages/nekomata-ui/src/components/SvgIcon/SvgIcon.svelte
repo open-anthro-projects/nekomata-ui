@@ -9,13 +9,13 @@
 </script>
 
 <style>
-    .svgIcon{
+    .nm-ui-svg-icon{
         height: var(--nm-ui-svgIcon-height, 1.5em);
         width: var(--nm-ui-svgIcon-width, 1.5em);
         fill: var(--nm-ui-svgIcon-fill, currentColor);
     }
 </style>
 
-<svg {id} data-testid={data_testid} class="svgIcon {clazz}" {style} focusable="false" {viewBox} aria-hidden="true">
+<svg {id} data-testid={data_testid} class="{clazz} nm-ui-svg-icon" {style} focusable="false" {viewBox} aria-hidden="true">
     <path d={d} />
 </svg>

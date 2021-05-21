@@ -7,7 +7,7 @@
 </script>
 
 <style>
-  .grid-container{
+  .nm-ui-grid-container{
     display: var(--nm-ui-grid-container-display, grid);
     background-color: var(--nm-ui-grid-container-background-color, inherit);
     color: var(--nm-ui-grid-container-color, inherit);
@@ -27,6 +27,6 @@
   }
 </style>
 
-<div {id} data-testid={data_testid} class="grid-container {clazz}" {style}>
+<div {id} data-testid={data_testid} class="{clazz} nm-ui-grid-container" {style}>
   <slot />
 </div>

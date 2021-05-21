@@ -7,7 +7,7 @@
 </script>
 
 <style>
-  .row {
+  .nm-ui-row {
       display: var(--nm-ui-row-display, flex);
       position: var(--nm-ui-row-position, relative);
       align-items: var(--nm-ui-row-align-items, center);
@@ -18,6 +18,6 @@
   }
 </style>
 
- <div {id} data-testid={data_testid} class="row {clazz}" {style}>
+ <div {id} data-testid={data_testid} class="{clazz} nm-ui-row" {style}>
    <slot />
  </div>
