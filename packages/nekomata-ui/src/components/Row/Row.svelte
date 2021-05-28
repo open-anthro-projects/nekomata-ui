@@ -3,6 +3,7 @@
   export {clazz as class}
   export let id:string = null;
   export let style:string = null;
+  /* istanbul ignore next */
   export let data_testid:string = null;
 </script>
 

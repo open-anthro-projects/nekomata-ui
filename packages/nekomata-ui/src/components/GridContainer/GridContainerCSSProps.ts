@@ -9,10 +9,10 @@ export default interface GridContainerCSSProps {
   '--nm-ui-grid-container-justify-items'?: String;
   '--nm-ui-grid-container-padding'?: String;
   '--nm-ui-grid-container-margin'?: String;
-  alignItems?: String;
-  justifyContent?: String;
-  alignContent?: String;
-  gridAutoColumns?: String;
-  gridAutoRows?: String;
-  gridAutoFlow?: String;
+  '--nm-ui-grid-container-align-items'?: String;
+  '--nm-ui-grid-container-justify-content'?: String;
+  '--nm-ui-grid-container-align-content'?: String;
+  '--nm-ui-grid-container-grid-auto-columns'?: String;
+  '--nm-ui-grid-container-grid-auto-rows'?: String;
+  '--nm-ui-grid-container-grid-auto-flow'?: String;
 }

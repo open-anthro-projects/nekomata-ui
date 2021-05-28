@@ -1,1 +1,0 @@
-export type { default as StyleProps } from "./StyleProps";
