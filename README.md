@@ -13,7 +13,7 @@
 
 Nekomata-ui is an UI framework / component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
 
-This framework/library is being build with the idea that you can follow any set of design guidelines/philosophies to reach the design you want for application. This means there is no enforcement into certain design guidelines/philosophies by Nekomata-ui. 
+This framework/library is being build with the idea that you can follow any set of design guidelines/philosophies to reach the design you want for your application. This means there is no enforcement into certain design guidelines/philosophies by Nekomata-ui. 
 
 ### Nekomata-ui tries to be that by:
 
