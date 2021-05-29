@@ -13,9 +13,13 @@
 
 Nekomata-ui is an UI framework / component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
 
+This framework/library is being build with the idea that you can follow any set of design guidelines/philosophies to reach the design you want for application. This means there is no enforcement into certain design guidelines/philosophies by Nekomata-ui. 
+
 ### Nekomata-ui tries to be that by:
 
-* Exporting CSS custom properties (variables) from our components which can be used to alter how they work on the screen.
+* Exporting CSS custom properties (variables) from our components which can be used to alter how they work on the screen. 
+* Components are not build with pre-defined media queries or a dependency to a store with breakpoints. (The aim is to have components with profiles (css classes) that you can alter and set from the outside)
+
 
 ***
 ### Installation
@@ -41,7 +45,7 @@ This will change when there is a site.
 
 ### Contributing
 
-[Contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md)
+New ideas and improvements are very welcome and will help the framework/library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
 
 ### Climate policy
 

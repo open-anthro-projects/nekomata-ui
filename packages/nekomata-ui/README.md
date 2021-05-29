@@ -11,13 +11,14 @@
 
 **Currently in development**
 
-Nekomata-ui is an UI framework / component libary build with Svelte that aims to be a radical new approach for UI frameworks like how Svelte works in comparison to traditional frameworks like React and Vue.
+Nekomata-ui is an UI framework / component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
+
+This framework/library is being build with the idea that you can follow any set of design guidelines/philosophies to reach the design you want for application. This means there is no enforcement into certain design guidelines/philosophies by Nekomata-ui. 
 
 ### Nekomata-ui tries to be that by:
 
-* Focusing on the freedom to adapt things to your own needs in the components. (Nekomata-ui takes inspiration from other frameworks and UI designs for its components but does not enforce that the ideas behind it are followed)
-* Only using CSS3 without any external library.
-* Going forward instead of looking back. (Implementing new specifications if the browser support is around 80/90% and by not offering support for outdated browsers IE11)
+* Exporting CSS custom properties (variables) from our components which can be used to alter how they work on the screen. 
+* Components are not build with pre-defined media queries or a dependency to a store with breakpoints. (The aim is to have components with profiles (css classes) that you can alter and set from the outside)
 
 ***
 ### Installation
@@ -26,12 +27,15 @@ Nekomata-ui is an UI framework / component libary build with Svelte that aims to
 npm install --save-dev nekomata-ui
 ```
 
-## Components
+## Components:
 - AppBar
 - Row
 - GridContainer (initial version)
 - SvgIcon
-- Drawer
+- Drawer (initial modal version)
+
+## Utils:
+- styleStringBuilder (Turning an object into a css style string)
 
 ## Features:
 - themeStore
@@ -51,13 +55,20 @@ This will change when there is a site.
 
 ### Contributing
 
-[Contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md)
+New ideas and improvements are very welcome and will help the framework/library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
 
 ### Climate policy
 
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
+- 0.2.0: 
+  styleStringBuilder added. 
+  CSS media queries removed from the components. 
+  Rewrite of the CSS custom properties to make them more unique. 
+  Every component now has a type interface that can be used to make an object. This can be used by the styleStringBuilder to make a css style string for a component. 
+  All components now have an id attribute that can be set. Which makes it possible to navigate to the component and to target the component from the outside by JavaScript and CSS.
+  All components now have and data_testid that can used to set and testId for the Svelte testing library.
 - 0.1.8: (modal) drawer added without backdrop (initial version).
 - 0.1.7: CssStyleString changed to $: style.
 - 0.1.6: SvgIcon test fixes and package structure changes.
