@@ -7,9 +7,6 @@
   <a href="https://github.com/open-anthro-projects/nekomata-ui/blob/main/LICENSE">
     <img alt="GitHub" src="https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic">
   </a>
-  <a href="https://snyk.io/advisor/npm-package/nekomata-ui">
-    <img alt="Snyk" src="https://snyk.io/advisor/npm-package/nekomata-ui/badge.svg">
-  </a>
 </p>
 
 **Currently in development**
