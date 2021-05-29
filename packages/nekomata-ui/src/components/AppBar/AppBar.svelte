@@ -4,7 +4,6 @@
   export let id:string = null;
   export let style:string = null;
   export let variant: 'top' | 'bottom' = 'top';
-  /* istanbul ignore next */
   export let data_testid:string = null;
 </script>
 
