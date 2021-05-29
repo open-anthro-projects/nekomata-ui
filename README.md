@@ -8,7 +8,7 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic">
   </a>
 </p>
-
+[![nekomata-ui](https://snyk.io/advisor/npm-package/nekomata-ui/badge.svg)](https://snyk.io/advisor/npm-package/nekomata-ui)
 **Currently in development**
 
 Nekomata-ui is an UI framework / component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
