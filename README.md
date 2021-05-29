@@ -8,6 +8,7 @@
     <img alt="GitHub" src="https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic">
   </a>
 </p>
+[![nekomata-ui](https://snyk.io/advisor/npm-package/nekomata-ui/badge.svg)](https://snyk.io/advisor/npm-package/nekomata-ui)
 
 **Currently in development**
 
