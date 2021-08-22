@@ -43,8 +43,8 @@ npm install --save-dev nekomata-ui
     - Uses the Local Storage from the browser to store the state between visits.
     - Make the page load without visible theme switching onload (see flash going from light to dark)
 
-Check the [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki) for more information about the features. 
-This will change when there is a site. 
+Check the [website](https://open-anthro-projects.github.io/nekomata-ui/) for more information about the features. 
+Website is still under construction!
 
 ### Code coverage:
 
@@ -62,6 +62,7 @@ New ideas and improvements are very welcome and will help the framework/library 
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
+- 0.2.1: Dependencies update and an change to the setThemeOnLoad() method from the ThemeStore.
 - 0.2.0: 
   styleStringBuilder added. 
   CSS media queries removed from the components. 

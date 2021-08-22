@@ -30,8 +30,7 @@ npm install --save-dev nekomata-ui
 ### Documentation
 **Currently in development**
 
-Can be found in our [wiki](https://github.com/open-anthro-projects/nekomata-ui/wiki)
-This will change when there is a site.
+Can be found in our [website](https://open-anthro-projects.github.io/nekomata-ui/)
 
 ### Package health:
 [![nekomata-ui](https://snyk.io/advisor/npm-package/nekomata-ui/badge.svg)](https://snyk.io/advisor/npm-package/nekomata-ui)

@@ -1,7 +1,7 @@
 {
   "name": "nekomata-ui",
   "license": "MIT",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "svelte": "dist/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.umd.js",
@@ -66,7 +66,7 @@
     "type": "git",
     "url": "https://github.com/open-anthro-projects/nekomata-ui"
   },
-  "homepage": "",
+  "homepage": "https://open-anthro-projects.github.io/nekomata-ui/",
   "bugs": {
     "url": "https://github.com/open-anthro-projects/nekomata-ui/issues"
   },
