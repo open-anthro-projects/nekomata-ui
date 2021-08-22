@@ -25,12 +25,17 @@ function setTheme() {
             })
         },
         setThemeOnLoad: () => {
-            let theme  = window.localStorage.getItem(themeKey);
-            if (theme === "light" || theme === "dark") {
-                set(theme)
+            let dataTheme = document.documentElement.getAttribute('data-theme')
+            if (dataTheme === null) {
+                let theme  = window.localStorage.getItem(themeKey);
+                if (theme === "light" || theme === "dark") {
+                    set(theme)
+                } else {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light"
+                    set(theme)
+                }
             } else {
-                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light"
-                set(theme) 
+                set(dataTheme)
             }
         }
     };
