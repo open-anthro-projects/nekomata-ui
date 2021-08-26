@@ -5,7 +5,6 @@
     export let variant = "modal";
     export let anchor: "left" | "right" | "top" | "bottom" = "left";
     export let style:string = null;
-    /* istanbul ignore next */
     export let data_testid:string = null;
 </script>
 
