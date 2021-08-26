@@ -1,7 +1,7 @@
 # Nekomata-ui
 
-[![npm](https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic)]
-[![license](https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic)]
+[![npm](https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic)](https://www.npmjs.com/package/nekomata-ui)
+[![license](https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic)](https://github.com/open-anthro-projects/nekomata-ui/blob/main/LICENSE)
 
 
 **Currently in development**
