@@ -1,6 +1,6 @@
 # Nekomata-ui
 
-![npm](https://img.shields.io/npm/v/nekomata-ui?color=green)
+![npm](https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic)
 
 <p>
   <a href="https://www.npmjs.com/package/nekomata-ui">
