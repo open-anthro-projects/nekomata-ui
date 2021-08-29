@@ -40,7 +40,7 @@
     border-radius: var(--nm-ui-appbar-border-radius, initial);
   }
 
-  .nm-ui-appbar-header-a {
+  .nm-ui-appbar-a-header {
     width: var(--nm-ui-appbar-a-width, 100%);
     display: var(--nm-ui-appbar-a-display, flex);
     flex-shrink: var(--nm-ui-appbar-a-flex-shrink, 0);
@@ -52,15 +52,15 @@
     right: var(--nm-ui-appbar-a-right, initial);
   }
 
-  .nm-ui-appbar-top-a {
+  .nm-ui-appbar-a-top  {
     top: var(--nm-ui-appbar-a-top, 0px);
   }
 
-  .nm-ui-appbar-bottom-a {
+  .nm-ui-appbar-a-bottom  {
     bottom: var(--nm-ui-appbar-a-bottom, 0px);
   }
 
-  .nm-ui-appbar-style-a {
+  .nm-ui-appbar-a-style {
     color: var(--nm-ui-appbar-a-color, initial);
     background-color: var(--nm-ui-appbar-a-background-color, initial);
     transition: var(--nm-ui-appbar-a-transition, initial);
@@ -77,10 +77,10 @@
   class:nm-ui-appbar-bottom = {variant === 'bottom' && css_profile === 'default'}
   class:nm-ui-appbar-header = {css_profile === 'default'}
   class:nm-ui-appbar-style = {css_profile === 'default'}
-  class:nm-ui-appbar-top-a = {variant === 'top' && css_profile === 'a'} 
-  class:nm-ui-appbar-bottom-a = {variant === 'bottom' && css_profile === 'a'}
-  class:nm-ui-appbar-header-a = {css_profile === 'a'}
-  class:nm-ui-appbar-style-a = {css_profile === 'a'}      
+  class:nm-ui-appbar-a-top = {variant === 'top' && css_profile === 'a'} 
+  class:nm-ui-appbar-a-bottom = {variant === 'bottom' && css_profile === 'a'}
+  class:nm-ui-appbar-a-header = {css_profile === 'a'}
+  class:nm-ui-appbar-a-style = {css_profile === 'a'}      
   class="{clazz}" 
   style={style}>
   <slot />
