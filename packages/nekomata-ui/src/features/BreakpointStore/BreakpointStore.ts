@@ -22,7 +22,7 @@ function breakpointCheck(width:number) {
     }
 }
 
-function breakpointStore(checkBreakpoint = breakpointCheck) {
+export default function breakpoint(checkBreakpoint = breakpointCheck) {
   if (typeof window === "undefined"){
     return writable(null);
   } 
@@ -38,5 +38,3 @@ function breakpointStore(checkBreakpoint = breakpointCheck) {
     subscribe: store.subscribe
   };
 }
-
-export const breakpoint = breakpointStore();

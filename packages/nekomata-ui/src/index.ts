@@ -1,5 +1,6 @@
 export {themeStore} from './features';
-export {breakpointStore} from './features';
+export {setBreakpoint} from './features';
+export {breakpoint} from './features';
 
 export {AppBar} from './components'
 export {Button} from './components'

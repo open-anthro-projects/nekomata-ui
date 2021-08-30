@@ -24,6 +24,7 @@ npm install --save-dev nekomata-ui
 
 ## Components:
 - AppBar
+- Button (icon) (initial version)
 - Row
 - GridContainer (initial version)
 - SvgIcon
@@ -57,6 +58,9 @@ New ideas and improvements are very welcome and will help the framework/library 
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
+- 0.2.3: Export fix.
+- 0.2.2: Button (icon) (initial version), BreakpointStore (experimental) based on the Smelte breakpointstore added.
+Appbar, Button and SvgIcon now have 2 css profiles (more info will follow)
 - 0.2.1: Dependencies update and an change to the setThemeOnLoad() method from the ThemeStore.
 - 0.2.0: 
   styleStringBuilder added. 
