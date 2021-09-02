@@ -16,6 +16,12 @@
         --nm-ui-appbar-a-color: white;
         --nm-ui-appbar-a-position: static;
     }
+
+    @media only screen and (min-width: 600px){
+        .nekomata-ui{
+            --nm-ui-row-min-height: 64px;
+        }
+    }
 </style>
 
 <div class="nekomata-ui">
