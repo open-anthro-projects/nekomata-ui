@@ -8,13 +8,14 @@
     export let id:string = null;
     export let style:string = null;
     export let css_profile: 'default' | 'a' = 'default';
+    export let aria_label:string = null;
     export let data_testid:string = null;
     
     function click() {
         dispatch('click');
 	  }
 
-  </script>
+</script>
 
 <style>
 
@@ -81,7 +82,7 @@
   }
 </style>
 
-<button on:click={click} {id} data-testid={data_testid}
+<button on:click={click} {id} data-testid={data_testid} aria-label={aria_label}
   class:nm-ui-icon-button = {css_profile === 'default'}
   class:nm-ui-icon-button-style = {css_profile === 'default'}
   class:nm-ui-icon-button-a = {css_profile === 'a'}
