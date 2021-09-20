@@ -27,6 +27,7 @@ npm install --save-dev nekomata-ui
 - Button (icon) (initial version)
 - Row
 - GridContainer (initial version)
+- Overlay
 - SvgIcon
 - Drawer (initial modal version)
 
@@ -51,13 +52,14 @@ Website is still under construction!
 
 ### Contributing
 
-New ideas and improvements are very welcome and will help the framework/library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
+New ideas and improvements are very welcome and will help the library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
 
 ### Climate policy
 
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
+- 0.2.4: Overlay added and aria-label added to the Button component.
 - 0.2.3: Export fix.
 - 0.2.2: Button (icon) (initial version), BreakpointStore (experimental) based on the Smelte breakpointstore added.
 Appbar, Button and SvgIcon now have 2 css profiles (more info will follow)

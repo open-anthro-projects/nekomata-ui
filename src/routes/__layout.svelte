@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { AppBar, themeStore, Row, SvgIcon, Button, Drawer} from 'nekomata-ui'
+    import { AppBar, themeStore, Row, SvgIcon, Button, Drawer, Overlay} from 'nekomata-ui'
 
     let drawerVisible = false;
 </script>
@@ -15,6 +15,8 @@
         --nm-ui-appbar-a-background-color: #1976d2;
         --nm-ui-appbar-a-color: white;
         --nm-ui-appbar-a-position: static;
+        --nm-ui-overlay-transition-property: none;
+        --nm-ui-overlay-cursor: auto;
     }
 
     @media only screen and (min-width: 600px){
@@ -22,9 +24,13 @@
             --nm-ui-row-min-height: 64px;
         }
     }
+
+    .drawer{
+        --nm-ui-overlay-display: block;
+    }
 </style>
 
-<div class="nekomata-ui">
+<div class:drawer={drawerVisible === true} class="nekomata-ui">
     <AppBar>
         <Row>
             <Button on:click={() => drawerVisible = !drawerVisible}>
@@ -32,6 +38,7 @@
             </Button>
         </Row>
     </AppBar>
+    <Overlay on:click={() => drawerVisible = !drawerVisible}/>
     <Drawer active={drawerVisible}>
         <AppBar css_profile={"a"}>
             <Row>

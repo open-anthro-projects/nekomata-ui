@@ -37,7 +37,7 @@ Can be found in our [website](https://open-anthro-projects.github.io/nekomata-ui
 
 ### Contributing
 
-New ideas and improvements are very welcome and will help the framework/library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
+New ideas and improvements are very welcome and will help the library grow. See [contributing](https://github.com/open-anthro-projects/nekomata-ui/blob/main/CONTRIBUTING.md) how you can contribute.
 
 ### Climate policy
 
