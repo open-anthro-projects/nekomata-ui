@@ -25,7 +25,7 @@ npm install --save-dev nekomata-ui
 ## Components:
 - AppBar
 - Button (icon) (initial version)
-- Row
+- FlexBox (Was Row in 2.5 and before)
 - GridContainer (initial version)
 - Overlay
 - SvgIcon
