@@ -1,4 +1,4 @@
-name: Nekomata-ui code coverage
+name: Nekomata-ui Codecov code coverage
 on: [push]
 jobs:
   run:
@@ -6,7 +6,7 @@ jobs:
     defaults:
       run:
         working-directory: ./packages/nekomata-ui
-    name: Setup Node and tests
+    name: Setup Node and Run tests
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
