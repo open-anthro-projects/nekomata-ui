@@ -1,5 +1,5 @@
 export {AppBar} from './AppBar'
-export {Row} from './Row'
+export {FlexBox} from './FlexBox'
 export {GridContainer} from './GridContainer'
 export {Overlay} from './Overlay'
 export {SvgIcon} from './SvgIcon'
@@ -16,6 +16,9 @@ export type {DrawerCSSProps} from './Drawer'
 export type {GridContainerCSSProps} from './GridContainer'
 export type {OverlayCSSProps} from './Overlay'
 export type {OverlayCSSPropsA} from './Overlay'
-export type {RowCSSProps} from './Row'
+export type {FlexBoxRowCSSProps} from "./FlexBox"
+export type {FlexBoxRowCSSPropsA} from "./FlexBox"
+export type {FlexBoxColumnCSSProps} from "./FlexBox"
+export type {FlexBoxColumnCSSPropsA} from "./FlexBox"
 export type {SVGCSSProps} from './SvgIcon'
 export type {SVGCSSPropsA} from './SvgIcon'
