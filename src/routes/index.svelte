@@ -4,29 +4,38 @@
     let panelList = new Array();
 
     let list = [{
-		id: 0
+		id: 0,
+        style: "--max-height: 100%"
+	}
+    ,{
+		id: 1,
+        style: null
 	}, {
-		id: 1
+		id: 2,
+        style: null
 	}, {
-		id: 2
+		id: 3,
+        style: null
 	}, {
-		id: 3
+		id: 4,
+        style: null
 	}, {
-		id: 4
+		id: 5,
+        style: null
 	}, {
-		id: 5
-	}, {
-		id: 6
+		id: 6,
+        style: "--max-height: 100%"
 	}];
 
 
     function maxheight(panel: HTMLElement) {
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
+        if (panel.style.getPropertyValue("--max-height")) {
+            panel.style.setProperty("--max-height" , null);
         } else {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+        panel.style.setProperty("--max-height" , panel.scrollHeight + "px");
         } 
     }
+
 </script>
 
 <style>
@@ -47,7 +56,7 @@
     .panel {
         padding: 0 18px;
         background-color: white;
-        max-height: 0;
+        max-height: var(--max-height, 0);
         overflow: hidden;
         transition: max-height 0.5s ease-out;
     }
@@ -69,11 +78,11 @@
             <h1>Welcome to Nekomata-ui</h1>
             <p>This website is under construction!</p>
         
-        {#each list as item, index (item.id)}
+        {#each list as item}
 
-        <button on:click={() => maxheight(panelList[index])}>click me</button>
+        <button on:click={() => maxheight(panelList[item.id])}>click me</button>
 
-        <div class="panel" bind:this={panelList[index]}>
+        <div class="panel" bind:this={panelList[item.id]} style={item.style}>
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

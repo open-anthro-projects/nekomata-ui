@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { AppBar, themeStore, Row, SvgIcon, Button, Drawer, Overlay} from 'nekomata-ui'
+    import { AppBar, themeStore, FlexBox, SvgIcon, Button, Drawer, Overlay} from 'nekomata-ui'
 
     let drawerVisible = false;
 </script>
@@ -21,32 +21,38 @@
 
     @media only screen and (min-width: 600px){
         .nekomata-ui{
-            --nm-ui-row-min-height: 64px;
+            --nm-ui-flex-box-row-min-height: 64px;
         }
     }
 
     .drawer{
         --nm-ui-overlay-display: block;
+        --nm-ui-flex-box-column-align-items: stretch;
     }
 </style>
 
 <div class:drawer={drawerVisible === true} class="nekomata-ui">
     <AppBar>
-        <Row>
+        <FlexBox>
             <Button on:click={() => drawerVisible = !drawerVisible}>
                 <SvgIcon d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></SvgIcon>
             </Button>
-        </Row>
+        </FlexBox>
     </AppBar>
     <Overlay on:click={() => drawerVisible = !drawerVisible}/>
     <Drawer active={drawerVisible}>
-        <AppBar css_profile={"a"}>
-            <Row>
-                <Button on:click={() => drawerVisible = !drawerVisible}>
-                    <SvgIcon d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></SvgIcon>
-                </Button>
-            </Row>
-        </AppBar>
+        <FlexBox variant="column">
+            <AppBar css_profile={"a"}>
+                <FlexBox>
+                    <Button on:click={() => drawerVisible = !drawerVisible}>
+                        <SvgIcon d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></SvgIcon>
+                    </Button>
+                </FlexBox>
+            </AppBar>
+            <ul>
+                <li>about</li>
+            </ul>
+        </FlexBox>
     </Drawer>
     <slot></slot>
 </div>

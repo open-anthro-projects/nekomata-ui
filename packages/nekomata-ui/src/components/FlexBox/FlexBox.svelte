@@ -25,7 +25,7 @@
       flex-direction: var(--nm-ui-flex-box-column-flex-direction, column);
       display: var(--nm-ui-flex-box-column-display, flex);
       position: var(--nm-ui-flex-box-column-position, relative);
-      align-items: var(--nm-ui-flex-box-column-align-items, center);
+      align-items: var(--nm-ui-flex-box-column-align-items, initial);
       padding: var(--nm-ui-flex-box-column-padding, 0px 0px 0px 0px);
       margin: var(--nm-ui-flex-box-column-margin, 0px 0px 0px 0px);
       min-width: var(--nm-ui-flex-box-column-min-width, 100%);
@@ -47,7 +47,7 @@
       flex-direction: var(--nm-ui-flex-box-column-a-flex-direction, column);
       display: var(--nm-ui-flex-box-column-a-display, flex);
       position: var(--nm-ui-flex-box-column-a-position, relative);
-      align-items: var(--nm-ui-flex-box-column-a-align-items, center);
+      align-items: var(--nm-ui-flex-box-column-a-align-items, initial);
       padding: var(--nm-ui-flex-box-column-a-padding, 0px 0px 0px 0px);
       margin: var(--nm-ui-flex-box-column-a-margin, 0px 0px 0px 0px);
       min-width: var(--nm-ui-flex-box-column-a-min-width, 100%);
