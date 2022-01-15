@@ -70,7 +70,6 @@
         display: var(--nm-ui-drawer-display, flex);
         outline: var(--nm-ui-drawer-outline, 0);
         overflow: var(--nm-ui-drawer-overflow, auto);
-        flex-direction: var(--nm-ui-drawer-flex-direction, column);
         -webkit-overflow-scrolling: var(--nm-ui-drawer-webkit-overflow-scrolling, touch);
         background-color: var(--nm-ui-drawer-background-color, #fff);
         transition-duration: var(--nm-ui-drawer-transition-duration, 0.5s);

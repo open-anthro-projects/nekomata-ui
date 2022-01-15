@@ -13,7 +13,6 @@ export default interface DrawerCSSProps  {
     '--nm-ui-drawer-display'?: String;
     '--nm-ui-drawer-outline'?: String;
     '--nm-ui-drawer-overflow'?: String;
-    '--nm-ui-drawer-flex-direction'?: String;
     '--nm-ui-drawer-webkit-overflow-scrolling'?: String;
     '--nm-ui-drawer-background-color'?: String;
     '--nm-ui-drawer-transition-duration'?: String;
