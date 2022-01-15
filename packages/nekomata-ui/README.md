@@ -1,12 +1,12 @@
 # Nekomata-ui
 
+Nekomata-ui is an UI component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
+
 [![npm](https://img.shields.io/npm/v/nekomata-ui?color=brightgreen&style=plastic)](https://www.npmjs.com/package/nekomata-ui)
 [![license](https://img.shields.io/github/license/open-anthro-projects/nekomata-ui?style=plastic)](https://github.com/open-anthro-projects/nekomata-ui/blob/main/LICENSE)
 
 
 **Currently in development**
-
-Nekomata-ui is an UI component library build with Svelte that focuses on delivering components and features that can be adaptable to your application needs. 
 
 This library is being build with the idea that you can follow any set of design guidelines/philosophies to reach the design you want for your application. This means there is no enforcement into certain design guidelines/philosophies by Nekomata-ui. 
 
