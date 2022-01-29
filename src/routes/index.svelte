@@ -1,7 +1,11 @@
 <script lang="ts">
-    import { GridContainer } from 'nekomata-ui'
+    import { GridContainer, AccordionPanel} from 'nekomata-ui'
 
     let panelList = new Array();
+
+    let panel: AccordionPanel;
+
+    let test = false;
 
     let list = [{
 		id: 0,
@@ -29,10 +33,10 @@
 
 
     function maxheight(panel: HTMLElement) {
-        if (panel.style.getPropertyValue("--max-height")) {
-            panel.style.setProperty("--max-height" , null);
+        if (panel.style.getPropertyValue("--nm-ui-accordion-panel-max-height")) {
+            panel.style.setProperty("--nm-ui-accordion-panel-max-height" , null);
         } else {
-        panel.style.setProperty("--max-height" , panel.scrollHeight + "px");
+        panel.style.setProperty("--nm-ui-accordion-panel-max-height" , 100 + "%");
         } 
     }
 
@@ -47,6 +51,7 @@
 
     .item{
         grid-area: w;
+        --nm-ui-accordion-panel-active-max-height: 100%;
     }
 
     h1, p {
@@ -77,12 +82,34 @@
         <div class="item">
             <h1>Welcome to Nekomata-ui</h1>
             <p>This website is under construction!</p>
+
         
-        {#each list as item}
+<!-- 
+        <button on:click={() => maxheight(panel.exportHTMLElement())}>click me</button> -->
 
-        <button on:click={() => maxheight(panelList[item.id])}>click me</button>
+        <button on:click={() => test = !test}>click me</button>
 
-        <div class="panel" bind:this={panelList[item.id]} style={item.style}>
+        <AccordionPanel active={test}>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ 
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </AccordionPanel>
+
+        
+
+        <!-- <div class="panel" bind:this={panelList[item.id]} style={item.style}>
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -98,9 +125,8 @@
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+        </div> -->
 
-        {/each}
     </div>
     </GridContainer>
 </div>
