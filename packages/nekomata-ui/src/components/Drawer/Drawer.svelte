@@ -1,6 +1,7 @@
 <script lang="ts">
     let clazz = '';
     export {clazz as class}
+    export let id:string = null;
 	export let active = false;
     export let variant = "modal";
     export let anchor: "left" | "right" | "top" | "bottom" = "left";
@@ -80,7 +81,7 @@
 
 </style>
 
-<aside data-testid={data_testid} class="{clazz} nm-ui-drawer" 
+<aside {id} data-testid={data_testid} class="{clazz} nm-ui-drawer" 
     class:nm-ui-drawer-left = {anchor === 'left'}
     class:nm-ui-drawer-right = {anchor === 'right'}
     class:nm-ui-drawer-top = {anchor === 'top'}  

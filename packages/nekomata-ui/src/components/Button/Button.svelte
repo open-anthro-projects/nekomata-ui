@@ -11,8 +11,8 @@
     export let aria_label:string = null;
     export let data_testid:string = null;
     
-    function click() {
-        dispatch('click');
+    function click(event : Event) {
+        dispatch('click', {event: event});
 	  }
 
 </script>
@@ -82,7 +82,7 @@
   }
 </style>
 
-<button on:click={click} {id} data-testid={data_testid} aria-label={aria_label}
+<button on:click={e => click(e)} {id} data-testid={data_testid} aria-label={aria_label}
   class:nm-ui-icon-button = {css_profile === 'default'}
   class:nm-ui-icon-button-style = {css_profile === 'default'}
   class:nm-ui-icon-button-a = {css_profile === 'a'}
