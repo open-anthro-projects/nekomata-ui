@@ -60,7 +60,7 @@ New ideas and improvements are very welcome and will help the library grow. See 
 Nekomata-ui is very concerned about the climate. For this reason, packages that are one year old will be given the deprecated status and then removed from services such as NPM after six months. (Only applicable to services on which nekomata-ui releases were released directly)
 
 ## Changelog:
-- 0.2.10: AccordionPanel bugfix.
+- 0.2.11: AccordionPanel max-height: max-content changed to 100%.
 - 0.2.8: AccordionPanel added.
 - 0.2.7: Small fixes for the drawer and flexbox.
 - 0.2.6: Library updates and Row has been changed to FlexBox with column as available variant.
