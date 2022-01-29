@@ -13,6 +13,7 @@
         padding: var(--nm-ui-accordion-panel-padding, 0 18px);
         background-color: var(--nm-ui-accordion-panel-background-color, white);
         overflow: var(--nm-ui-accordion-panel-overflow, hidden);
+        max-height: var(--nm-ui-accordion-panel-max-height);
         transition: var(--nm-ui-accordion-panel-transition, max-height 0.5s ease-out);
     }
 
@@ -20,23 +21,24 @@
         padding: var(--nm-ui-accordion-panel-a-padding, 0 18px);
         background-color: var(--nm-ui-accordion-panel-a-background-color, white);
         overflow: var(--nm-ui-accordion-panel-a-overflow, hidden);
+        max-height: var(--nm-ui-accordion-panel-a-max-height);
         transition: var(--nm-ui-accordion-panel-a-transition, max-height 0.5s ease-out);
     }
 
     .nm-ui-accordion-panel-inactive{
-        max-height: var(--nm-ui-accordion-panel-inactive-max-height, 0);
+        --nm-ui-accordion-panel-max-height: var(--nm-ui-accordion-panel-inactive-max-height, 0);
     }
 
     .nm-ui-accordion-panel-active{
-        max-height: var(--nm-ui-accordion-panel-active-max-height, max-content);
+        --nm-ui-accordion-panel-max-height: var(--nm-ui-accordion-panel-active-max-height, max-content);
     }
 
     .nm-ui-accordion-panel-inactive-a{
-        max-height: var(--nm-ui-accordion-panel-inactive-a-max-height, 0);
+        --nm-ui-accordion-panel-a-max-height: var(--nm-ui-accordion-panel-inactive-a-max-height, 0);
     }
 
     .nm-ui-accordion-panel-active-a{
-        max-height: var(--nm-ui-accordion-panel-active-a-max-height, max-content);
+        --nm-ui-accordion-panel-a-max-height: var(--nm-ui-accordion-panel-active-a-max-height, max-content);
     }
 </style>
 
