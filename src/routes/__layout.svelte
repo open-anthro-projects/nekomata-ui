@@ -56,7 +56,7 @@
             <Button on:click={() => drawerVisible = !drawerVisible}>
                 <SvgIcon d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></SvgIcon>
             </Button>
-            <a href="/">Nekomata-ui</a>
+            <a href="/nekomata-ui/">Nekomata-ui</a>
         </FlexBox>
     </AppBar>
     <Overlay on:click={() => drawerVisible = !drawerVisible}/>
@@ -67,7 +67,7 @@
                     <Button on:click={() => drawerVisible = !drawerVisible}>
                         <SvgIcon d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></SvgIcon>
                     </Button>
-                    <a href="/">Nekomata-ui</a>
+                    <a href="/nekomata-ui/">Nekomata-ui</a>
                 </FlexBox>
             </AppBar>
             <ul>
