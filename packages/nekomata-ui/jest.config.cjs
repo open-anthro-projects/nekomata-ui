@@ -7,7 +7,7 @@ module.exports = {
       "^.+\\.ts$": "ts-jest",
       "^.+\\.js$": "ts-jest",
     },
-    modulePathIgnorePatterns:["<rootDir>/src/routes","<rootDir>/src/app.d.ts","<rootDir>/src/app.html"],
+    modulePathIgnorePatterns:["<rootDir>/src/routes","<rootDir>/src/app.d.ts","<rootDir>/src/app.html","index.ts"],
     moduleFileExtensions: ["js", "ts", "svelte"],
     moduleNameMapper: {
       "^\\$lib(.*)$": "<rootDir>/src/lib$1",
