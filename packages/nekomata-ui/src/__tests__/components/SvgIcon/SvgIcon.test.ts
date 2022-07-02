@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import SvgIcon from '../../../components/SvgIcon/SvgIcon.svelte'
+import SvgIcon from '../../../lib/components/SvgIcon/SvgIcon.svelte'
 
 describe("Unit test to check default rendering", () => {
 

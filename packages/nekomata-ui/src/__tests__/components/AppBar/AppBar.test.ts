@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import AppBar from '../../../components/AppBar/AppBar.svelte'
+import AppBar from '../../../lib/components/AppBar/AppBar.svelte'
 
 describe("Unit test to check default rendering", () => {
 

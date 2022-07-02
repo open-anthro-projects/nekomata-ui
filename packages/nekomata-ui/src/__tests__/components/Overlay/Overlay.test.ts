@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import Overlay from '../../../components/Overlay/Overlay.svelte'
+import Overlay from '../../../lib/components/Overlay/Overlay.svelte'
 
 describe("Unit test to check default rendering", () => {
 

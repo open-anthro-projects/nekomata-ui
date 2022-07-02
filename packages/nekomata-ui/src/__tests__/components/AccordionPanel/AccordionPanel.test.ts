@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import AccordionPanel from '../../../components/AccordionPanel/AccordionPanel.svelte'
+import AccordionPanel from '../../../lib/components/AccordionPanel/AccordionPanel.svelte'
 
 describe("Unit test to check default rendering", () => {
 

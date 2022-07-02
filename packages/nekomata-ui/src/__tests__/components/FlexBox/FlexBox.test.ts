@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import FlexBox from '../../../components/FlexBox/FlexBox.svelte'
+import FlexBox from '../../../lib/components/FlexBox/FlexBox.svelte'
 
 describe("Unit tests to check default rendering", () => {
 

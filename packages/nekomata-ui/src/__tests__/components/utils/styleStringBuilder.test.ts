@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/extend-expect'
 import '@testing-library/jest-dom'
 
-import {writeStyleStringFrom} from '../../../components/utils/styleStringBuilder'
+import {writeStyleStringFrom} from '../../../lib/components/utils/styleStringBuilder'
 
 describe("Unit test to check the styleStringBuilder", () => {
 

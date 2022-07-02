@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import Drawer from '../../../components/Drawer/Drawer.svelte'
+import Drawer from '../../../lib/components/Drawer/Drawer.svelte'
 
 describe("Unit test to check default rendering", () => {
 

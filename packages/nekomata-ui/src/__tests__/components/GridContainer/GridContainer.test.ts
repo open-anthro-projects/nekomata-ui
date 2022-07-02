@@ -3,7 +3,7 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
-import GridContainer from '../../../components/GridContainer/GridContainer.svelte'
+import GridContainer from '../../../lib/components/GridContainer/GridContainer.svelte'
 
 describe("Unit test to check default rendering", () => {
 

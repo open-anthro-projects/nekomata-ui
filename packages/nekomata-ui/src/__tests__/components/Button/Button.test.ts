@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import { render, fireEvent } from '@testing-library/svelte'
 
 
-import Button from '../../../components/Button/Button.svelte'
+import Button from '../../../lib/components/Button/Button.svelte'
 
 describe("Unit test to check default rendering", () => {
 
