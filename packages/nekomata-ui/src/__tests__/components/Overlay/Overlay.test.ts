@@ -1,6 +1,8 @@
 import '@testing-library/jest-dom/extend-expect'
 import '@testing-library/jest-dom'
 
+import { afterEach, describe, expect, it, vi } from 'vitest'
+
 import { render, fireEvent } from '@testing-library/svelte'
 
 import Overlay from '../../../lib/components/Overlay/Overlay.svelte'
@@ -20,7 +22,7 @@ describe("Unit test to check default rendering", () => {
       props: { data_testid:"overlay" },
     });
   
-    const mock = jest.fn();
+    const mock = vi.fn();
     const overlay = getByTestId('overlay');
   
     component.$on("click", mock);

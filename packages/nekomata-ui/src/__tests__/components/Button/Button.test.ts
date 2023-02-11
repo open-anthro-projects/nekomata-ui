@@ -3,6 +3,8 @@ import '@testing-library/jest-dom'
 
 import { render, fireEvent } from '@testing-library/svelte'
 
+import { afterEach, describe, expect, it, vi } from 'vitest'
+
 
 import Button from '../../../lib/components/Button/Button.svelte'
 
@@ -19,7 +21,7 @@ describe("Unit test to check default rendering", () => {
 
     it('Verify button click', async () => {
         const results = render(Button)
-        const onClick = jest.fn()
+        const onClick = vi.fn()
         results.component.$on('click', onClick)
     
         const button = results.container.querySelector('button')

@@ -20,4 +20,3 @@ describe("Unit test to check default rendering", () => {
 
 });
 
- 
